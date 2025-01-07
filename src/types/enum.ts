@@ -1,1 +1,4 @@
-export type btntype = "Dark" | "Light"
+export enum ButtonVariant {
+    DARK = "dark",
+    LIGHT = "light"
+}

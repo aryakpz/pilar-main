@@ -1,9 +1,9 @@
-import { btntype } from "./enum";
+import { ButtonVariant } from "./enum";
 
 export type ButtonProps = {
     label: string;
-    classname?: string;
+    style?: string;
     type?: "button" | "submit";
-    btntype?: btntype;
+    btnType?: ButtonVariant;
     onClick: () => void;
 }

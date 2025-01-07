@@ -1,14 +1,15 @@
 import React from "react";
 import clsx from "clsx";
 import { ButtonProps } from "../types/type";
+import { ButtonVariant } from "../types/enum";
 
-export const Button: React.FC<ButtonProps> = ({ label, classname, type, onClick, btntype }) => {
+export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, btnType }) => {
     return (
         <button
-            className={clsx(  classname,  "rounded md px-4 py-2",
+            className={clsx( style, "rounded md px-4 py-2",
                 {
-                    "bg-btn-black text-white font-medium": btntype === "Dark",
-                    "bg-btn-white font-medium": btntype === "Light",
+                    "bg-btn-black text-white font-medium": btnType === ButtonVariant.DARK,
+                    "bg-btn-white font-medium": btnType === ButtonVariant.LIGHT,
                 }
             )}
             type={type}
