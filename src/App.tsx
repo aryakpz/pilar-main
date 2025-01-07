@@ -4,9 +4,9 @@ import { AdminPage } from "./pages/AdminPage"
 function App() {
 
   return (
- <Routes>
-  <Route path='/' element={<AdminPage/>}/>
- </Routes>
+      <Routes>
+         <Route path='/' element={<AdminPage/>}/>
+      </Routes>
   )
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../components/Button";
 import { useNavigate } from "react-router-dom";
-import { ButtonVariant } from "../types/enum";
+import { ButtonType, ButtonVariant } from "../types/enum";
 
 export const AdminPage: React.FC = () => {
     const nav = useNavigate()
@@ -14,19 +14,19 @@ export const AdminPage: React.FC = () => {
         < div >
             <Button
                 label=" +  New portfolio"
-                type="button"
+                type={ButtonType.BUTTON}
                 onClick={handleClick}
                 style=""
-                btnType={ButtonVariant.DARK}
+                variant={ButtonVariant.DARK}
             />
             <div className="p-5">
             </div>
             <Button
                 label="View More"
-                type="button"
+                type={ButtonType.BUTTON}
                 onClick={handleClick}
                 style=""
-                btnType={ButtonVariant.LIGHT}
+                variant={ButtonVariant.LIGHT}
             />
         </div >
     )
