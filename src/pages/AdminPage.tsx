@@ -12,9 +12,9 @@ export const AdminPage: React.FC = () => {
     }
 
     return (
-        < div >
+        <div>
             <Header />
-            <div>
+            <div className="p-10">
                 <Button
                     label=" +  New portfolio"
                     type={ButtonType.BUTTON}
@@ -32,6 +32,6 @@ export const AdminPage: React.FC = () => {
                     variant={ButtonVariant.LIGHT}
                 />
             </div>
-        </div >
+        </div>
     )
 }
