@@ -11,7 +11,8 @@ export const AdminPage: React.FC = () => {
     }
 
     return (
-        < div >
+        <div className="flex w-full flex-col">
+            <div>
             <Button
                 label=" +  New portfolio"
                 type={ButtonType.BUTTON}
@@ -28,6 +29,7 @@ export const AdminPage: React.FC = () => {
                 style=""
                 variant={ButtonVariant.LIGHT}
             />
-        </div >
+            </div>
+        </div>
     )
 }
