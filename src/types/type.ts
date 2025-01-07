@@ -1,7 +1,9 @@
-export type buttonProps = {
+import { btntype } from "./enum";
+
+export type ButtonProps = {
     label: string;
     classname?: string;
     type?: "button" | "submit";
-    btntype?:"bg-black" | "bg-white"
+    btntype?: btntype;
     onClick: () => void;
 }

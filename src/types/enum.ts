@@ -1,0 +1,1 @@
+export type btntype = "Dark" | "Light"
