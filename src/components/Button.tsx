@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
-import { ButtonProps } from "../types/type";
-import { ButtonVariant } from "../types/enum";
+import { ButtonProps } from "../types";
+import { ButtonVariant } from "../types";
 
 export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, variant }) => {
     console.log(type)

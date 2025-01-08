@@ -1,11 +1,11 @@
 import React from "react";
 import { Button } from "../components";
 import { useNavigate } from "react-router-dom";
-import { ButtonType, ButtonVariant } from "../types/enum";
+import { ButtonType, ButtonVariant } from "../types";
 import { Header } from "../components";
 import { SelectBox } from "../components";
 
-export const AdminPage: React.FC = () => {
+export const Portfolio: React.FC = () => {
     const nav = useNavigate()
     const handleClick = () => {
         console.log("clicked")

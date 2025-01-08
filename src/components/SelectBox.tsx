@@ -1,6 +1,6 @@
 import React from "react"
-import { useJsonFetch } from "../hooks/useJsonFetch"
-import { SelectboxProps } from "../types/type"
+import { useJsonFetch } from "../hooks"
+import { SelectboxProps } from "../types"
 
 
 export const SelectBox: React.FC<SelectboxProps> = ({ onSelectChange }) => {
