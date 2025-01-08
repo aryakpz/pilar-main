@@ -1,7 +1,7 @@
 import portfolioLogo from "/assets/images/pilar-logo.svg"
 import portfolioImage from "/assets/images/pilar-nav-image.png"
 
-export const Portfolios = () => {
+export const Header = () => {
   return (
     <div className="border-b w-full z-50">
       <nav className="border-gray-200 bg-white px-2 py-2.5 sm:px-4">

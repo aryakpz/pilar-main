@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import { ButtonType, ButtonVariant } from "../types/enum";
-import { Portfolios } from "../components/Portfolios";
+import { Header } from "../components/Header";
 
 export const AdminPage: React.FC = () => {
     const nav = useNavigate()
@@ -13,7 +13,7 @@ export const AdminPage: React.FC = () => {
 
     return (
         <div>
-            <Portfolios />
+            <Header />
             <div className="p-10">
                 <Button
                     label=" +  New portfolio"
