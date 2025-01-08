@@ -19,4 +19,4 @@ export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, var
             {label}
         </button>
     );
-};
+};                                                                                                                                                                                          
