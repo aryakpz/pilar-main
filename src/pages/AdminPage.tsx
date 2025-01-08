@@ -12,6 +12,10 @@ export const AdminPage: React.FC = () => {
         nav('')
     }
 
+    const onSelectChange=(value:string)=>{
+        console.log(value)
+    }
+
     return (
         <div>
             <Header />
@@ -33,7 +37,7 @@ export const AdminPage: React.FC = () => {
                     variant={ButtonVariant.LIGHT}
                 />
             </div>
-            <SelectBox/>
+            <SelectBox onSelectChange={onSelectChange}/>
         </div>
     )
 }
