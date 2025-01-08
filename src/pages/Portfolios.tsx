@@ -3,16 +3,21 @@ import { Button } from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import { ButtonType, ButtonVariant } from "../types/enum";
 import { Header } from "../components/Header";
+import { SearchBar } from "../components/SearchBar";
 
-export const AdminPage: React.FC = () => {
+export const Portfolio: React.FC = () => {
     const nav = useNavigate()
     const handleClick = () => {
         console.log("clicked")
         nav('')
     }
 
+    const onSearch=(value:string)=>{
+        console.log(value)
+    }
+
     return (
-        <div>
+        <div>       
             <Header />
             <div className="p-10">
                 <Button
@@ -29,6 +34,9 @@ export const AdminPage: React.FC = () => {
                     onClick={handleClick}
                     variant={ButtonVariant.LIGHT}
                 />
+            </div>
+            <div className="p-10">
+                <SearchBar onSearch={onSearch}/>
             </div>
         </div>
     )

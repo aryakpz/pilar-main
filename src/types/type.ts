@@ -7,3 +7,7 @@ export type ButtonProps = {
     variant?: ButtonVariant;
     onClick: () => void;
 }
+
+export type SearchProps={
+    onSearch:(value:string)=>void
+}
