@@ -1,9 +1,9 @@
 import React from "react";
-import { Button } from "../components/Button";
+import { Button } from "../components";
 import { useNavigate } from "react-router-dom";
 import { ButtonType, ButtonVariant } from "../types/enum";
-import { Header } from "../components/Header";
-import { SelectBox } from "../components/SelectBox";
+import { Header } from "../components";
+import { SelectBox } from "../components";
 
 export const AdminPage: React.FC = () => {
     const nav = useNavigate()
