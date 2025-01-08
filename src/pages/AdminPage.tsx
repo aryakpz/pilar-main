@@ -3,6 +3,7 @@ import { Button } from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import { ButtonType, ButtonVariant } from "../types/enum";
 import { Header } from "../components/Header";
+import { SelectBox } from "../components/SelectBox";
 
 export const AdminPage: React.FC = () => {
     const nav = useNavigate()
@@ -32,6 +33,7 @@ export const AdminPage: React.FC = () => {
                     variant={ButtonVariant.LIGHT}
                 />
             </div>
+            <SelectBox/>
         </div>
     )
 }
