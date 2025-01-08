@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { AdminPage } from "./pages/AdminPage"
+import { AdminPage } from "./pages/Portfolios"
 
 function App() {
 

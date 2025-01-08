@@ -1,0 +1,18 @@
+import { SelectboxProps } from "../types/type"
+
+export const LanguageSelector: React.FC<SelectboxProps> = ({ onSelectChange }) => {
+
+    return (
+        <div className="w-1/2 flex flex-col">
+            <p className="font-medium text-sm text-grey-900 pb-2">Localize your detials in</p>
+            <div className="flex relative w-full">
+                <select className="w-full border bg-transparent rounded-md text-sm p-2 appearance-none bg-down-arrow bg-no-repeat bg-[length:auto_1.4rem] pr-5 bg-arrow-position focus:ring-blue-500"
+                    onChange={(e) => onSelectChange(e.target.value)}>
+                    <option value="English">English</option>
+                    <option value="Dutch">Dutch</option>
+                </select>
+            </div>
+            <span className="text-xs text-gray-500 pt-2 ">Note: Add details in English and Dutch to publish.</span>
+        </div>
+    )
+}

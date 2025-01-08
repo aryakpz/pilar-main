@@ -3,12 +3,17 @@ import { Button } from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import { ButtonType, ButtonVariant } from "../types/enum";
 import { Header } from "../components/Header";
+import { LanguageSelector } from "../components/languageSelectbox";
 
 export const AdminPage: React.FC = () => {
     const nav = useNavigate()
     const handleClick = () => {
         console.log("clicked")
         nav('')
+    }
+
+    const onLanguageChange = (value: string) => {
+        console.log(value)
     }
 
     return (
@@ -30,6 +35,7 @@ export const AdminPage: React.FC = () => {
                     variant={ButtonVariant.LIGHT}
                 />
             </div>
+            <LanguageSelector onSelectChange={onLanguageChange} />
         </div>
     )
 }
