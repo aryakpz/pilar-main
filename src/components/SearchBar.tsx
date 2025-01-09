@@ -5,9 +5,7 @@ type SearchProps = {
     onSearch: (value: string) => void
 }
 
-export const SearchBar: React.FC<SearchProps> = ({ onSearch }) => {
-
-    return (
+export const SearchBar: React.FC<SearchProps> = ({ onSearch }) => (
         <div className="flex flex-row ">
             <div className="rounded-lg border relative ">
                 <div className="absolute left-0 items-center pl-3 pt-2">
@@ -19,5 +17,4 @@ export const SearchBar: React.FC<SearchProps> = ({ onSearch }) => {
                     onChange={(e) => onSearch(e.target.value)} />
             </div>
         </div>
-    )
-}
+)
