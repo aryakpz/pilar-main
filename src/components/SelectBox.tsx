@@ -1,7 +1,9 @@
 import React from "react"
 import { useJsonFetch } from "../hooks"
-import { SelectboxProps } from "../types"
 
+type SelectboxProps= {
+    onSelectChange:(value:string)=>void
+}
 
 export const SelectBox: React.FC<SelectboxProps> = ({ onSelectChange }) => {
     const { data } = useJsonFetch();
