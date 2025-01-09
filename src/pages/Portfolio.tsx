@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../components";
 import { useNavigate } from "react-router-dom";
 import { ButtonType, ButtonVariant } from "../types";
@@ -7,13 +7,13 @@ import { SelectBox } from "../components";
 
 export const Portfolio: React.FC = () => {
     const nav = useNavigate()
+    const [country,setCountry]=useState("")
     const handleClick = () => {
-        console.log("clicked")
         nav('')
     }
 
     const onSelectChange=(value:string)=>{
-        console.log(value)
+        setCountry(value)
     }
 
     return (
