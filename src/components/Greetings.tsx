@@ -10,31 +10,29 @@ export const Greetings = () => {
     const onSearch = (value: string) => {
         setSearch(value)
     }
-    const {greet}=getCurrentTime();
+    const { greet } = getCurrentTime();
 
     return (
-        <main className="w-full h-full overflow-y-auto pt-10 bg-gray-100">
-            <div className="px-12 pb-5 sm:px-24 md:px-28 lg:px-36">
-                <div className="flex flex-col gap-3 mb-6">
-                    <h4 className="font-medium text-sm sm:text-lg text-gray-700">
-                       Good {greet}, Admin!
-                    </h4>
-                    <div className="flex justify-between items-center flex-wrap gap-2">
-                        <h3 className="font-semibold text-3xl text-gray-900 ">All portfolio</h3>
-                        <Button
-                            label="New portfolio"
-                            type={ButtonType.BUTTON}
-                            onClick={handleClick}
-                            isImg={true}
-                            variant={ButtonVariant.DARK}
-                        />
-                    </div>
-                    <div className="flex justify-between items-center gap-2 flex-wrap">
-                        <SearchBar onSearch={onSearch} />
-                    </div>
-                </div>
+        <div className="flex flex-col gap-3 mb-6">
+            <h4 className="font-medium text-sm sm:text-lg text-gray-700">
+                Good {greet}, Admin!
+            </h4>
+            <div className="flex justify-between items-center flex-wrap gap-2">
+                <h3 className="font-semibold text-3xl text-gray-900 ">All portfolio</h3>
+                <Button
+                    label="New portfolio"
+                    type={ButtonType.BUTTON}
+                    onClick={handleClick}
+                    isImg={true}
+                    variant={ButtonVariant.DARK}
+                />
             </div>
-        </main>
-
+            <div className="flex justify-between items-center gap-2 flex-wrap">
+                <SearchBar onSearch={onSearch} />
+            </div>
+            <div className="my-1 h-px bg-gray-200"></div>
+        </div>
     )
 }
+
+
