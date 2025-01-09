@@ -5,6 +5,7 @@ import { ButtonType, ButtonVariant, Language } from "../types";
 import { Header } from "../components";
 import { SelectBox } from "../components";
 import { LanguageSelector } from "../components/languageSelectbox";
+import { InputLabel } from "../components/InputLabel";
 
 
 export const Portfolio: React.FC = () => {
@@ -12,6 +13,7 @@ export const Portfolio: React.FC = () => {
     const [country, setCountry] = useState("")
     const [search, setSearch] = useState("")
     const [language, setLanguage] = useState("en")
+    const [input, setInput] = useState("")
     const handleClick = () => {
         nav('')
     }
@@ -26,6 +28,10 @@ export const Portfolio: React.FC = () => {
 
     const onSearch = (value: string) => {
         setSearch(value)
+    }
+
+    const onInputChange = (value: string) => {
+        setInput(value)
     }
 
     return (
@@ -54,6 +60,12 @@ export const Portfolio: React.FC = () => {
             </div>
             <SelectBox onSelectChange={onSelectChange} />
             <LanguageSelector onSelectChange={onLanguageChange} />
+
+            <div className="p-5">
+                <InputLabel
+                    text="Country"
+                    onChange={onInputChange} />
+            </div>
         </div>
     )
 }
