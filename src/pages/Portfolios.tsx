@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../components/Button";
 import { useNavigate } from "react-router-dom";
-import { ButtonType, ButtonVariant } from "../types/enum";
+import { ButtonType, ButtonVariant, LanguageType } from "../types/enum";
 import { Header } from "../components/Header";
 import { LanguageSelector } from "../components/languageSelectbox";
 
 export const AdminPage: React.FC = () => {
     const nav = useNavigate()
+    const [language,setLanguage]=useState("en")
     const handleClick = () => {
         console.log("clicked")
         nav('')
     }
 
-    const onLanguageChange = (value: string) => {
-        console.log(value)
+    const onLanguageChange = (value:LanguageType) => {
+        setLanguage(value)
     }
-
+    
     return (
         <div>
             <Header />

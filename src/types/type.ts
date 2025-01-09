@@ -7,7 +7,3 @@ export type ButtonProps = {
     variant?: ButtonVariant;
     onClick: () => void;
 }
-
-export type SelectboxProps = {
-    onSelectChange: (value: string) => void
-}
