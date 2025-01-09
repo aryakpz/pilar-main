@@ -4,7 +4,6 @@ import { ButtonProps } from "../types/type";
 import { ButtonVariant } from "../types/enum";
 
 export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, variant }) => {
-    console.log(type)
     return (
         <button
             className={clsx( style, "rounded-md px-4 py-2",

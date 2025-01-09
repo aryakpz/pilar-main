@@ -1,8 +1,11 @@
 import React from "react";
 import searchIcon from "/assets/images/search-icon.svg"
-import { SearchProps } from "../types/type";
 
-export const SearchBar:React.FC<SearchProps> = ({onSearch}) => {
+type SearchProps = {
+    onSearch: (value: string) => void
+}
+
+export const SearchBar: React.FC<SearchProps> = ({ onSearch }) => {
 
     return (
         <div className="flex flex-row ">
@@ -13,7 +16,7 @@ export const SearchBar:React.FC<SearchProps> = ({onSearch}) => {
                 <input
                     placeholder="Search"
                     className="block w-full text-sm p-2 pl-10 rounded-lg focus:ring focus:ring-black"
-                    onChange={(e)=>onSearch(e.target.value)} />
+                    onChange={(e) => onSearch(e.target.value)} />
             </div>
         </div>
     )
