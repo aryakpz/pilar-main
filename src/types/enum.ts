@@ -8,7 +8,7 @@ export enum ButtonType {
     BUTTON = "button"
 }
 
-export enum LanguageType{
-    ENG="English",
-    DUT="Dutch"
+export enum Language {
+    ENG = "English",
+    DUT = "Dutch"
 }
