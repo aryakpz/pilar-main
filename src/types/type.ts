@@ -5,5 +5,6 @@ export type ButtonProps = {
     style?: string;
     type?: ButtonType
     variant?: ButtonVariant;
+    isImg:boolean;
     onClick: () => void;
 }
