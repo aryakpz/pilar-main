@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom"
-import { AdminPage } from "./pages/Portfolios"
+import { Portfolio } from "./pages/Portfolios"
 
 function App() {
 
   return (
       <Routes>
-         <Route path='/' element={<AdminPage/>}/>
+         <Route path='/' element={<Portfolio/>}/>
       </Routes>
   )
 }

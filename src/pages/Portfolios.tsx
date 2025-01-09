@@ -5,7 +5,7 @@ import { ButtonType, ButtonVariant, Language } from "../types/enum";
 import { Header } from "../components/Header";
 import { LanguageSelector } from "../components/languageSelectbox";
 
-export const AdminPage: React.FC = () => {
+export const Portfolio: React.FC = () => {
     const nav = useNavigate()
     const [language,setLanguage]=useState("en")
     const handleClick = () => {
