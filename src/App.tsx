@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { Portfolio } from "./pages/Portfolios"
+import { Portfolio } from "./pages"
 
 function App() {
 

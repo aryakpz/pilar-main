@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import { Button } from "../components/Button";
+import { Button } from "../components";
 import { useNavigate } from "react-router-dom";
-import { ButtonType, ButtonVariant } from "../types/enum";
-import { Header } from "../components/Header";
-import { SearchBar } from "../components/SearchBar";
+import { ButtonType, ButtonVariant } from "../types";
+import { Header } from "../components";
+import { SelectBox } from "../components";
 
 export const Portfolio: React.FC = () => {
     const nav = useNavigate()
-    const [search, setSearch] = useState("")
+    const [country,setCountry]=useState("")
     const handleClick = () => {
         nav('')
     }
 
-    const onSearch = (value: string) => {
-        setSearch(value)
+    const onSelectChange=(value:string)=>{
+        setCountry(value)
     }
 
     return (
@@ -24,6 +24,7 @@ export const Portfolio: React.FC = () => {
                     label=" +  New portfolio"
                     type={ButtonType.BUTTON}
                     onClick={handleClick}
+                    style=""
                     variant={ButtonVariant.DARK}
                 />
                 <div className="p-5">
@@ -32,12 +33,11 @@ export const Portfolio: React.FC = () => {
                     label="View More"
                     type={ButtonType.BUTTON}
                     onClick={handleClick}
+                    style=""
                     variant={ButtonVariant.LIGHT}
                 />
             </div>
-            <div className="p-10">
-                <SearchBar onSearch={onSearch} />
-            </div>
+            <SelectBox onSelectChange={onSelectChange}/>
         </div>
     )
 }

@@ -9,7 +9,14 @@ export default {
       colors: {
         'btn-black': '#1f2937',
         'btn-white': '#e5e7eb'
+      },
+      backgroundImage:{
+        'down-arrow':"url('/assets/images/downArrow.svg')",
+      },
+      backgroundPosition:{
+        'arrow-position':'right 0.8rem center',
       }
+
     },
   },
   plugins: [],
