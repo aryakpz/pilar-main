@@ -34,6 +34,7 @@ export const Portfolio: React.FC = () => {
         setInput(value)
     }
 
+    console.log(input)
     return (
         <div>
             <Header />
@@ -63,7 +64,7 @@ export const Portfolio: React.FC = () => {
 
             <div className="p-5">
                 <InputLabel
-                    text="Country"
+                    text="Address line 1"
                     onChange={onInputChange} />
             </div>
         </div>
