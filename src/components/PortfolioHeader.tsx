@@ -2,15 +2,15 @@ import { useState } from "react"
 import { ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
 import { SearchBar } from "./SearchBar"
-import { getCurrentTime } from "../utils"
+import { getTimePeriodOfDay } from "../utils"
 
-export const Greetings = () => {
+export const PortfolioHeader = () => {
     const [search, setSearch] = useState("")
     const handleClick = () => { }
     const onSearch = (value: string) => {
         setSearch(value)
     }
-    const { greet } = getCurrentTime();
+    const greet = getTimePeriodOfDay();
 
     return (
         <div className="flex flex-col gap-3 mb-6">
@@ -23,7 +23,7 @@ export const Greetings = () => {
                     label="New portfolio"
                     type={ButtonType.BUTTON}
                     onClick={handleClick}
-                    isImg={true}
+                    showAddIcon={true}
                     variant={ButtonVariant.DARK}
                 />
             </div>

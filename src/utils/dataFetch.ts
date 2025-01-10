@@ -6,16 +6,12 @@ export const getDetails = async () => {
 
 }
 
-export const getCurrentTime = () => {
-    let greet = "";
+export const getTimePeriodOfDay = () => {
     const hours = new Date().getHours();
     if (hours < 12) {
-        greet = "Morning";
+        return "Morning";
     } else if (hours < 16) {
-        greet = "Afternoon";
-    } else {
-        greet = "Evening";
-    }
-
-    return { greet };
+        return "Afternoon";
+    } else
+        return "Evening";
 };

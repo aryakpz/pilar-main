@@ -1,6 +1,6 @@
 import { useJsonFetch } from "../hooks"
 
-export const MainBody = () => {
+export const PortfolioList = () => {
     const { data } = useJsonFetch()
     
     return (
