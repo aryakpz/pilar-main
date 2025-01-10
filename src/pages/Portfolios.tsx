@@ -30,7 +30,7 @@ export const Portfolio: React.FC = () => {
         setSearch(value)
     }
 
-    const onChangeSelector = (value: SortSelect) => {
+    const getSortedPortfolios = (value: SortSelect) => {
         setsortPortfolios(value)
     }
 
@@ -63,9 +63,8 @@ export const Portfolio: React.FC = () => {
                 <LanguageSelector onSelectChange={onLanguageChange} />
             </div>
             <div className="p-5">
-                <SortSelector onChangeSelector={onChangeSelector} />
+                <SortSelector handleSort={getSortedPortfolios} />
             </div>
-
         </div>
     )
 }
