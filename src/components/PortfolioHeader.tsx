@@ -10,12 +10,12 @@ export const PortfolioHeader = () => {
     const onSearch = (value: string) => {
         setSearch(value)
     }
-    const greet = getTimePeriodOfDay();
+    const timePeriod = getTimePeriodOfDay();
 
     return (
         <div className="flex flex-col gap-3 mb-6">
             <h4 className="font-medium text-sm sm:text-lg text-gray-700">
-                Good {greet}, Admin!
+                Good {timePeriod}, Admin!
             </h4>
             <div className="flex justify-between items-center flex-wrap gap-2">
                 <h3 className="font-semibold text-3xl text-gray-900 ">All portfolio</h3>
