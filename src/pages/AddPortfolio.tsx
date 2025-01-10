@@ -1,9 +1,9 @@
-import { PortfolioFormNav } from "../components/AddPortfolioNav"
+import { StepperPageHeader } from "../components"
 
 export const AddPortfolis = () => {
     return (
         <div>
-            <PortfolioFormNav />
+            <StepperPageHeader />
         </div>
     )
 }

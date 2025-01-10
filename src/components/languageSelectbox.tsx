@@ -1,4 +1,4 @@
-import { Language } from "../types/enum"
+import { Language } from "../types"
 
 type SelectProps = {
     onSelectChange: (value: Language) => void

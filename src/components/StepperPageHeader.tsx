@@ -2,7 +2,7 @@ import { ProgressbarType } from '../types'
 import { ProgressBar } from './FomProgress'
 import arrow from '/assets/images/left-arrow.svg'
 
-export const PortfolioFormNav = () => (
+export const StepperPageHeader = () => (
     <div className="sticky top-0 z-50">
         <nav className="border-gray-200 bg-white px-2 py-2.5 sm:px-4">
             <div className="mx-auto flex flex-wrap items-center justify-between">
