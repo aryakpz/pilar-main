@@ -1,12 +1,20 @@
 import { useJsonFetch } from "../hooks"
+import { CardTypes } from "../types";
 
-export const MainBody = () => {
-    const { data } = useJsonFetch()
-    
+type FilterProps = {
+    searchValue: string
+}
+
+export const MainBody: React.FC<FilterProps> = ({ searchValue }) => {
+    const { data } = useJsonFetch();
+    const filterData = data?.cards.filter((item: CardTypes) => (
+        item.title.toLowerCase().includes(searchValue.toLowerCase())
+    ))
+
     return (
         <div className="flex flex-wrap gap-5">
-            {data?.cards.map((item: any) => (
-                <div className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 ">
+            {filterData && filterData.map((item: CardTypes, index: number) => (
+                <div key={index} className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 ">
                     <img alt={item.image} className="p-4 h-44 w-full object-contain rounded-lg" src={item.image} />
                     <div className="flex flex-col p-4 pt-0">
                         <div className="flex items-center">
@@ -30,3 +38,5 @@ export const MainBody = () => {
         </div>
     )
 }
+
+

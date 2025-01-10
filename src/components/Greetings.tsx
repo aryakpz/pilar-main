@@ -1,14 +1,18 @@
-import { useState } from "react"
 import { ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
 import { SearchBar } from "./SearchBar"
 import { getCurrentTime } from "../utils"
 
-export const Greetings = () => {
-    const [search, setSearch] = useState("")
+type GreetingProps = {
+    onSearchChange: (value: string) => void
+}
+
+
+export const Greetings: React.FC<GreetingProps> = ({ onSearchChange }) => {
+
     const handleClick = () => { }
     const onSearch = (value: string) => {
-        setSearch(value)
+        onSearchChange(value)
     }
     const { greet } = getCurrentTime();
 

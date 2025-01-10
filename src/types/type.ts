@@ -8,3 +8,9 @@ export type ButtonProps = {
     isImg:boolean;
     onClick: () => void;
 }
+
+export type CardTypes={
+    image:string;
+    title:string;
+    city:string;
+}
