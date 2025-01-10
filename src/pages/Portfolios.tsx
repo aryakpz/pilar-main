@@ -3,10 +3,25 @@ import { Header, PortfolioList, PortfolioHeader } from "../components";
 import { SortSelect } from "../types";
 
 export const Portfolio: React.FC = () => {
-    const [searchValue, setSearchValue] = useState<string>("")
-    const [sortType, setSortType] = useState<SortSelect>(SortSelect.ASC)
-    const handleSearch = (value: string) => {
-        setSearchValue(value)
+    const nav = useNavigate()
+    const [country, setCountry] = useState("")
+    const [search, setSearch] = useState("")
+    const [language, setLanguage] = useState("en")
+    const [input, setInput] = useState("")
+    const handleClick = () => {
+        nav('')
+    }
+
+    const onLanguageChange = (value: Language) => {
+        setLanguage(value)
+    }
+
+    const onSelectChange = (value: string) => {
+        setCountry(value)
+    }
+
+    const onSearch = (value: string) => {
+        setSearch(value)
     }
     const handleGetSort = (value: SortSelect) => {
         setSortType(value)
@@ -20,7 +35,25 @@ export const Portfolio: React.FC = () => {
                     <PortfolioHeader onSearchChange={handleSearch} onSelectSortType={handleGetSort} />
                     <PortfolioList searchValue={searchValue} sortType={sortType} />
                 </div>
-            </main>
+                <Button
+                    label="View More"
+                    type={ButtonType.BUTTON}
+                    onClick={handleClick}
+                    style=""
+                    variant={ButtonVariant.LIGHT}
+                />
+            </div>
+            <div className="p-10">
+                <SearchBar onSearch={onSearch} />
+            </div>
+            <SelectBox onSelectChange={onSelectChange} />
+            <LanguageSelector onSelectChange={onLanguageChange} />
+
+            <div className="p-5">
+                <InputLabel
+                    text="Address line 1"
+                    onChange={onInputChange} />
+            </div>
         </div>
     )
 }
