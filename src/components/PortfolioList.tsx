@@ -5,7 +5,7 @@ type FilterProps = {
     searchValue: string
 }
 
-export const MainBody: React.FC<FilterProps> = ({ searchValue }) => {
+export const PortfolioList: React.FC<FilterProps> = ({ searchValue }) => {
     const { data } = useJsonFetch();
     const filterData = data?.cards.filter((item: CardTypes) => (
         item.title.toLowerCase().includes(searchValue.toLowerCase())
@@ -38,5 +38,3 @@ export const MainBody: React.FC<FilterProps> = ({ searchValue }) => {
         </div>
     )
 }
-
-

@@ -1,20 +1,20 @@
 import { ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
 import { SearchBar } from "./SearchBar"
-import { getCurrentTime } from "../utils"
+import { getTimePeriodOfDay } from "../utils"
 
-type GreetingProps = {
+type HeaderProps = {
     onSearchChange: (value: string) => void
 }
 
 
-export const Greetings: React.FC<GreetingProps> = ({ onSearchChange }) => {
+export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
 
     const handleClick = () => { }
     const onSearch = (value: string) => {
         onSearchChange(value)
     }
-    const { greet } = getCurrentTime();
+    const greet = getTimePeriodOfDay();
 
     return (
         <div className="flex flex-col gap-3 mb-6">
@@ -27,7 +27,7 @@ export const Greetings: React.FC<GreetingProps> = ({ onSearchChange }) => {
                     label="New portfolio"
                     type={ButtonType.BUTTON}
                     onClick={handleClick}
-                    isImg={true}
+                    showAddIcon={true}
                     variant={ButtonVariant.DARK}
                 />
             </div>
