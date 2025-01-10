@@ -12,3 +12,9 @@ export enum Language {
     ENG = "English",
     DUT = "Dutch"
 }
+
+export enum ProgressbarType {
+    START = "start",
+    END = "end",
+    MID = "mid"
+}

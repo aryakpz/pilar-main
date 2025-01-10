@@ -37,6 +37,7 @@ export const Portfolio: React.FC = () => {
                     type={ButtonType.BUTTON}
                     onClick={handleClick}
                     style=""
+                    
                     variant={ButtonVariant.DARK}
                 />
                 <div className="p-5">

@@ -1,3 +1,5 @@
+import { ProgressbarType } from '../types'
+import { ProgressBar } from './FomProgress'
 import arrow from '/assets/images/left-arrow.svg'
 
 export const PortfolioFormNav = () => (
@@ -7,12 +9,23 @@ export const PortfolioFormNav = () => (
                 <div className="flex-1 flex justify-between gap-5 py-5 px-52 items-center whitespace-nowrap">
                     <div className="flex gap-5 items-center text-xl font-semibold">
                         <button type="button">
-                            <img src={arrow}/>
+                            <img src={arrow} />
                         </button>
                         <span>Adding Portfolio</span>
                     </div>
-                    <div>
-                        
+                    <div className='flex relative'>
+                        <ProgressBar
+                            isActive={true}
+                            type={ProgressbarType.START}
+                        />
+                        <ProgressBar
+                            isActive={false}
+                            type={ProgressbarType.MID}
+                        />
+                        <ProgressBar
+                            isActive={false}
+                            type={ProgressbarType.END}
+                        />
                     </div>
                 </div>
             </div>
