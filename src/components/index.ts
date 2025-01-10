@@ -2,4 +2,9 @@ export * from './Button';
 export * from './Header';
 export * from './SelectBox';
 export * from './languageSelectbox';
-export * from './SearchBar'
+export * from './SearchBar';
+export * from './AddPortfolioBody';
+export * from './AddPortfolioNav';
+export * from './CurrencySelectbox';
+export * from './DateFormatSelectbox';
+export * from './MeasurementSelectbox';

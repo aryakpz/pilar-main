@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ButtonType, ButtonVariant, Language } from "../types";
 import { Header } from "../components";
 import { SelectBox } from "../components";
-import { LanguageSelector } from "../components/languageSelectbox";
+import { LanguageSelector } from "../components";
 
 
 export const Portfolio: React.FC = () => {
@@ -54,7 +54,7 @@ export const Portfolio: React.FC = () => {
                 <SearchBar onSearch={onSearch} />
             </div>
             <SelectBox onSelectChange={onSelectChange} />
-            <LanguageSelector onSelectChange={onLanguageChange} />
+            <LanguageSelector handleLanguage={onLanguageChange} />
         </div>
     )
 }

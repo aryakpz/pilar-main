@@ -1,9 +1,11 @@
-import { PortfolioFormNav } from "../components/AddPortfolioNav"
+import { AddPortfolioFormBody } from "../components"
+import { PortfolioFormNav } from "../components"
 
 export const AddPortfolis = () => {
     return (
-        <div>
+        <div className="bg-gray-100 h-screen">
             <PortfolioFormNav />
+            <AddPortfolioFormBody />
         </div>
     )
 }

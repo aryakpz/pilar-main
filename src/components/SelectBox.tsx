@@ -20,4 +20,4 @@ export const SelectBox: React.FC<SelectboxProps> = ({ onSelectChange }) => {
             </select>
         </div>
     )
-}
+} 
