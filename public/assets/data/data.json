@@ -209,22 +209,22 @@
     {
       "image": "assets/card-image/change.png",
       "title": "Change=",
-      "city": "amsterdam • usd"
+      "city": "amsterdam • eur"
     },
     {
       "image": "assets/card-image/Dalpha.png",
-      "title": "dalphareel",
-      "city": "amsterdam • usd"
+      "title": "Dalpha Real Estate",
+      "city": "laren • eur"
     },
     {
       "image": "assets/card-image/DemoBuild.jpg",
-      "title": "Demo Build",
-      "city": "testcity • eur"
+      "title": "Demo Builder 1",
+      "city": "test city • eur"
     },
     {
       "image": "assets/card-image/Domus.png",
       "title": "Domus",
-      "city": "amsterdam • usd"
+      "city": "amsterdam • eur"
     },
     {
       "image": "assets/card-image/iqb.png",
@@ -233,17 +233,17 @@
     },
     {
       "image": "assets/card-image/pilar.png",
-      "title": "pilar",
+      "title": "Pilar",
       "city": "amsterdam • eur"
     },
     {
       "image": "assets/card-image/pms.jpg",
       "title": "PMS Test Building",
-      "city": "test • usd"
+      "city": "test • eur"
     },
     {
       "image": "assets/card-image/Serveuwell.png",
-      "title": "Server U Well",
+      "title": "Serve U Well",
       "city": "amsterdam • eur"
     }
   ]
