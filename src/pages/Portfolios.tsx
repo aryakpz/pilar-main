@@ -13,7 +13,7 @@ export const Portfolio: React.FC = () => {
     const [country, setCountry] = useState("")
     const [search, setSearch] = useState("")
     const [language, setLanguage] = useState("en")
-    const [sort, setSort] = useState<SortSelect>(SortSelect.ASC)
+    const [sortPortfolios, setsortPortfolios] = useState<SortSelect>(SortSelect.ASC)
     const handleClick = () => {
         nav('')
     }
@@ -31,7 +31,7 @@ export const Portfolio: React.FC = () => {
     }
 
     const onChangeSelector = (value: SortSelect) => {
-        setSort(value)
+        setsortPortfolios(value)
     }
 
     return (
