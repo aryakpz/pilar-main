@@ -48,11 +48,12 @@ export const Portfolio: React.FC = () => {
             </div>
             <SelectBox onSelectChange={onSelectChange} />
             <LanguageSelector onSelectChange={onLanguageChange} />
-
+        
             <div className="p-5">
                 <InputLabel
                     text="Address line 1"
-                    onChange={onInputChange} />
+                    onChange={onInputChange}
+                />
             </div>
         </div>
     )
