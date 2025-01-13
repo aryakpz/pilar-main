@@ -5,4 +5,5 @@ export * from './languageSelectbox';
 export * from './SearchBar';
 export * from './SortSelectbox';
 export * from './AssetHeader';
-export * from './AssetInnerButton'
+export * from './AssetInnerButton';
+export * from './AssetList';

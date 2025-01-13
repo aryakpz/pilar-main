@@ -34,12 +34,11 @@ export const AssetHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
                         variant={ButtonVariant.DARK}
                     />
                 </div>
-
-                <div className="my-1 h-px bg-gray-200"></div>
             </div>
             <div className="flex justify-between items-center gap-2 flex-wrap">
                 <SearchBar onSearch={onSearch} />
             </div>
+            <div className="mt-4 mb-6 h-px bg-gray-200"></div>
         </>
     )
 }
