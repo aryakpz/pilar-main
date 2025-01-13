@@ -15,6 +15,7 @@ export const DateFromatSelectbox: React.FC<DateFormatProps> = ({ handleDateforma
                             className="block w-full border rounded-lg p-2.5 text-sm appearance-none bg-white bg-down-arrow bg-no-repeat bg-size pr-5 bg-arrow-position"
                             onChange={(e) => handleDateformat(e.target.value as DateFormatType)}
                         >
+                            <option value="" disabled selected></option>
                             <option value={DateFormatType.DMY}>{DateFormatType.DMY}</option>
                             <option value={DateFormatType.MDY}>{DateFormatType.MDY}</option>
                         </select>

@@ -15,6 +15,7 @@ export const MeasuremtSelectbox: React.FC<MeasurementProps> = ({ handleMeasureme
                             className="block w-full border rounded-lg p-2.5 text-sm appearance-none bg-white bg-down-arrow bg-no-repeat bg-size pr-5 bg-arrow-position"
                             onChange={(e) => handleMeasurement(e.target.value as MeasurementType)}
                         >
+                            <option value="" disabled selected></option>
                             <option value={MeasurementType.METER}>{MeasurementType.METER}</option>
                             <option value={MeasurementType.INCH}>{MeasurementType.INCH}</option>
                             <option value={MeasurementType.FEET}>{MeasurementType.FEET}</option>

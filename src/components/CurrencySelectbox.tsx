@@ -15,6 +15,7 @@ export const CurrencySelectbox: React.FC<CurrecyProps> = ({ handleCurrency }) =>
                             className="block w-full border rounded-lg p-2.5 text-sm appearance-none bg-white bg-down-arrow bg-no-repeat bg-size pr-5 bg-arrow-position"
                             onChange={(e) => handleCurrency(e.target.value as CurrencyType)}
                         >
+                            <option value="" disabled selected></option>
                             <option value={CurrencyType.USE}>{CurrencyType.USE}</option>
                             <option value={CurrencyType.GBP}>{CurrencyType.GBP}</option>
                             <option value={CurrencyType.INR}>{CurrencyType.INR}</option>
