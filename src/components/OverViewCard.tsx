@@ -1,7 +1,7 @@
 import React from "react";
-import { CardType } from "../types";
+import { Portfolio } from "../types";
 
-export const OverViewCard: React.FC<{ item: CardType }> = ({ item }) => {
+export const OverViewCard: React.FC<{ item: Portfolio }> = ({ item }) => {
     return (
         <div className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60">
             <img alt={item.image} className="p-4 h-44 w-full object-contain rounded-lg" src={item.image} />
