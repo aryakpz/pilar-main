@@ -7,3 +7,9 @@ export type ButtonProps = {
     variant?: ButtonVariant;
     onClick: () => void;
 }
+
+export type AssetTypes={
+    image:string;
+    title:string;
+    city:string;
+}

@@ -38,22 +38,6 @@ export const Portfolio: React.FC = () => {
         <div>
             <Header />
             <div className="p-10">
-                <Button
-                    label=" +  New portfolio"
-                    type={ButtonType.BUTTON}
-                    onClick={handleClick}
-                    style=""
-                    variant={ButtonVariant.DARK}
-                />
-                <div className="p-5">
-                </div>
-                <Button
-                    label="View More"
-                    type={ButtonType.BUTTON}
-                    onClick={handleClick}
-                    style=""
-                    variant={ButtonVariant.LIGHT}
-                />
             </div>
             <div className="p-10">
                 <SearchBar onSearch={onSearch} />
