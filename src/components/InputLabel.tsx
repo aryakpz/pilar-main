@@ -3,7 +3,7 @@ import React from "react"
 type InputType = {
     text: string;
     onChange: (value: string) => void;
-    [key: string]: any;
+    [key: string]: string | ((value: string) => void);
 }
 
 export const InputLabel: React.FC<InputType> = ({ text, onChange, ...restprops }) => {
