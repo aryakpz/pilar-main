@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Button, SearchBar } from "../components";
 import { useNavigate } from "react-router-dom";
-import { ButtonType, ButtonVariant, Language, SortSelect } from "../types";
+import { ButtonType, ButtonVariant, Language } from "../types";
 import { Header } from "../components";
 import { SelectBox } from "../components";
-import { LanguageSelector } from "../components";
-import { SortSelector } from "../components";
+import { LanguageSelector } from "../components/languageSelectbox";
+import { InputLabel } from "../components/InputLabel";
 
 
 export const Portfolio: React.FC = () => {
@@ -13,7 +13,7 @@ export const Portfolio: React.FC = () => {
     const [country, setCountry] = useState("")
     const [search, setSearch] = useState("")
     const [language, setLanguage] = useState("en")
-    const [sortPortfolios, setsortPortfolios] = useState<SortSelect>(SortSelect.ASC)
+    const [input, setInput] = useState("")
     const handleClick = () => {
         nav('')
     }
@@ -30,8 +30,8 @@ export const Portfolio: React.FC = () => {
         setSearch(value)
     }
 
-    const getSortedPortfolios = (value: SortSelect) => {
-        setsortPortfolios(value)
+    const onInputChange = (value: string) => {
+        setInput(value)
     }
 
     return (
@@ -59,11 +59,13 @@ export const Portfolio: React.FC = () => {
                 <SearchBar onSearch={onSearch} />
             </div>
             <SelectBox onSelectChange={onSelectChange} />
+            <LanguageSelector onSelectChange={onLanguageChange} />
+        
             <div className="p-5">
-                <LanguageSelector onSelectChange={onLanguageChange} />
-            </div>
-            <div className="p-5">
-                <SortSelector handleSort={getSortedPortfolios} />
+                <InputLabel
+                    text="Address line 1"
+                    onChange={onInputChange}
+                />
             </div>
         </div>
     )
