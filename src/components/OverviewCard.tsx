@@ -1,14 +1,13 @@
 import React from "react";
-import { CardTypes } from "../types";
+import { Portfolio } from "../types";
 
 type ItemProps = {
-    item: CardTypes,
-    index: number
+    item: Portfolio
 }
 
-export const OverViewCard: React.FC<ItemProps> = ({ item, index }) => {
+export const OverViewCard: React.FC<ItemProps> = ({ item }) => {
     return (
-        <div key={index} className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 ">
+        <div key={item.id} className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 ">
             <img alt={item.image} className="p-4 h-44 w-full object-contain rounded-lg" src={item.image} />
             <div className="flex flex-col p-4 pt-0">
                 <div className="flex items-center">
@@ -26,7 +25,6 @@ export const OverViewCard: React.FC<ItemProps> = ({ item, index }) => {
                     {item.city}
                 </div>
             </div>
-            <div></div>
         </div>
     );
 };

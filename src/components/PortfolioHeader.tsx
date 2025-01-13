@@ -7,7 +7,6 @@ type HeaderProps = {
     onSearchChange: (value: string) => void
 }
 
-
 export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
 
     const handleClick = () => { }
@@ -38,5 +37,3 @@ export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
         </div>
     )
 }
-
-

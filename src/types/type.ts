@@ -1,5 +1,6 @@
-export type CardTypes={
-    image:string;
-    title:string;
-    city:string;
+export type Portfolio = {
+    id: number;
+    image: string;
+    title: string;
+    city: string;
 }
