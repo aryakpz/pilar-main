@@ -3,6 +3,7 @@ import { Button } from "./Button"
 import { SearchBar } from "./SearchBar"
 import { getTimePeriodOfDay } from "../utils"
 import { SortSelector } from "./SortSelectbox"
+import { useNavigate } from "react-router-dom"
 
 type HeaderProps = {
     onSearchChange: (value: string) => void
@@ -10,7 +11,10 @@ type HeaderProps = {
 }
 
 export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange, onSelectSortType }) => {
-    const handleClick = () => { }
+    const nav=useNavigate()
+    const handleClick = () => {
+        nav('/addPortfolio')
+    }
     const onSearch = (value: string) => {
         onSearchChange(value)
     }
