@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { ButtonType, ButtonVariant, Language } from "../types";
 import { Header } from "../components";
 import { SelectBox } from "../components";
-import { LanguageSelector } from "../components/languageSelectbox";
 import { InputLabel } from "../components/InputLabel";
 
 
@@ -12,14 +11,9 @@ export const Portfolio: React.FC = () => {
     const nav = useNavigate()
     const [country, setCountry] = useState("")
     const [search, setSearch] = useState("")
-    const [language, setLanguage] = useState("en")
     const [input, setInput] = useState("")
     const handleClick = () => {
         nav('')
-    }
-
-    const onLanguageChange = (value: Language) => {
-        setLanguage(value)
     }
 
     const onSelectChange = (value: string) => {
@@ -59,7 +53,6 @@ export const Portfolio: React.FC = () => {
                 <SearchBar onSearch={onSearch} />
             </div>
             <SelectBox onSelectChange={onSelectChange} />
-            <LanguageSelector onSelectChange={onLanguageChange} />
         
             <div className="p-5">
                 <InputLabel

@@ -1,11 +1,16 @@
 import { Route, Routes } from "react-router-dom"
-import { Portfolio } from "./pages"
+import { AddAsset, Portfolio } from "./pages"
 
 function App() {
 
   return (
       <Routes>
          <Route path='/' element={<Portfolio/>}/>
+          
+         <Route>
+         <Route path='/addAsset' element={<AddAsset/>}/>
+         </Route>
+
       </Routes>
   )
 }
