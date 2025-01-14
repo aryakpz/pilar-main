@@ -15,7 +15,8 @@ export const OverViewCard: React.FC<ItemProps> = ({ item }) => {
                     <button className="p-2">
                         <div className="w-fit">
                             <button className="text-gray-500 bg-white border border-gray-300 hover:bg-gray-400 p-0.5 pr-[0px] text-center  font-medium rounded-lg group flex h-min items-center justify-center">
-                                <span className="flex items-center rounded-md text-xs justify-center align-middle rotate-90 pl-3 pr-2 pb-1 pt-1  mr-[-4px] tracking-widest "> ...
+                                <span className="flex items-center rounded-md text-xs justify-center align-middle rotate-90 pl-3 pr-2 pb-1 pt-1  mr-[-4px] tracking-widest ">
+                                    ...
                                 </span>
                             </button>
                         </div>
