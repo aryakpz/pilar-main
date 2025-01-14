@@ -3,7 +3,8 @@ import { StepperPageHeader } from "../components"
 export const AddPortfolis = () => {
     return (
         <div>
-            <StepperPageHeader />
+            <StepperPageHeader
+                text="Adding Portfolio" />
         </div>
     )
-}
+} 

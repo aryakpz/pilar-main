@@ -2,7 +2,11 @@ import { ProgressbarType } from '../types'
 import { ProgressBar } from './FomProgress'
 import arrow from '/assets/images/left-arrow.svg'
 
-export const StepperPageHeader = () => (
+type StepperPageProps = {
+    text: string;
+}
+
+export const StepperPageHeader: React.FC<StepperPageProps> = ({ text }) => (
     <div className="sticky top-0 z-50">
         <nav className="border-gray-200 bg-white px-2 py-2.5 sm:px-4">
             <div className="mx-auto flex flex-wrap items-center justify-between">
@@ -11,7 +15,7 @@ export const StepperPageHeader = () => (
                         <button type="button">
                             <img src={arrow} />
                         </button>
-                        <span>Adding Portfolio</span>
+                        <span>{text}</span>
                     </div>
                     <div className='flex relative'>
                         <ProgressBar
