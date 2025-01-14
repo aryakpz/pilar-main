@@ -11,17 +11,11 @@ export const AddPortfolioFormBody = () => {
         setLanguage(value)
     }
 
-    const getCurrencyType = (value: CurrencyType) => {
-        console.log(value)
-    }
+    const getCurrencyType = (value: CurrencyType) => { }
 
-    const getMeasurementType = (value: MeasurementType) => {
-        console.log(value)
-    }
+    const getMeasurementType = (value: MeasurementType) => { }
 
-    const getDateFormat = (value: DateFormatType) => {
-        console.log(value)
-    }
+    const getDateFormat = (value: DateFormatType) => { }
 
     return (
         <div className="py-8 px-56">
@@ -34,9 +28,9 @@ export const AddPortfolioFormBody = () => {
                 </div>
                 <div className="mt-6">
                     <div className="flex flex-wrap gap-y-4">
-                        <CurrencySelectbox handleCurrency={getCurrencyType} />
-                        <DateFromatSelectbox handleDateformat={getDateFormat} />
-                        <MeasuremtSelectbox handleMeasurement={getMeasurementType} />
+                        <CurrencySelectbox handleSelectCurrency={getCurrencyType} />
+                        <DateFromatSelectbox handleSelectDateformat={getDateFormat} />
+                        <MeasuremtSelectbox handleSelectMeasurement={getMeasurementType} />
                     </div>
                 </div>
             </div>

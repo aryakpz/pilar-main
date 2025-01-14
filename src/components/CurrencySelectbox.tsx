@@ -1,10 +1,17 @@
 import { CurrencyType } from "../types"
 
 type CurrecyProps = {
-    handleCurrency: (value: CurrencyType) => void
+    handleSelectCurrency: (value: CurrencyType) => void
 }
 
-export const CurrencySelectbox: React.FC<CurrecyProps> = ({ handleCurrency }) => {
+const CurrencyDataType = [
+    { id: 1, value: CurrencyType.USE },
+    { id: 2, value: CurrencyType.GBP },
+    { id: 3, value: CurrencyType.INR },
+    { id: 4, value: CurrencyType.EUR },
+]
+
+export const CurrencySelectbox: React.FC<CurrecyProps> = ({ handleSelectCurrency }) => {
     return (
         <div className="flex-1 md:basic-1/2 pr-6">
             <div className="flex flex-col gap-2 w-full">
@@ -13,13 +20,12 @@ export const CurrencySelectbox: React.FC<CurrecyProps> = ({ handleCurrency }) =>
                     <div className="relative w-full">
                         <select
                             className="block w-full border rounded-lg p-2.5 text-sm appearance-none bg-white bg-down-arrow bg-no-repeat bg-size pr-5 bg-arrow-position"
-                            onChange={(e) => handleCurrency(e.target.value as CurrencyType)}
+                            onChange={(e) => handleSelectCurrency(e.target.value as CurrencyType)}
                         >
-                            <option value="" disabled selected></option>
-                            <option value={CurrencyType.USE}>{CurrencyType.USE}</option>
-                            <option value={CurrencyType.GBP}>{CurrencyType.GBP}</option>
-                            <option value={CurrencyType.INR}>{CurrencyType.INR}</option>
-                            <option value={CurrencyType.EUR}>{CurrencyType.EUR}</option>
+                            <option value="" hidden></option>
+                            {CurrencyDataType.map((item) => (
+                                <option value={item.value} key={item.id}>{item.value}</option>
+                            ))}
                         </select>
                     </div>
                 </div>
