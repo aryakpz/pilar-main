@@ -2,7 +2,7 @@ import { ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
 import { SearchBar } from "./SearchBar"
 import { getTimePeriodOfDay } from "../utils"
-import { AssetInnterButton } from "./AssetInnerButton"
+import { Tabs } from "./Tabs"
 
 type HeaderProps = {
     onSearchChange: (value: string) => void
@@ -25,7 +25,7 @@ export const AssetHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
                     Good {greet}, Admin!
                 </h4>
                 <div className="flex justify-between items-center flex-wrap gap-2">
-                    <AssetInnterButton />
+                    <Tabs />
                     <Button
                         label="New Asset"
                         type={ButtonType.BUTTON}

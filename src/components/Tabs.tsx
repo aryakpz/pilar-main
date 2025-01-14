@@ -3,7 +3,7 @@ import { useJsonFetch } from "../hooks";
 import { Button } from "./Button";
 import { ButtonType, ButtonVariant } from "../types";
 
-export const AssetInnterButton = () => {
+export const Tabs = () => {
     const { data } = useJsonFetch()
     const [activeButton, setActiveButton] = useState<string | null>("list");
 

@@ -25,7 +25,7 @@ export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick = ()
         <button
             className={buttonClass}
             type={type}
-            onClick={() => onClick()}
+            onClick={onClick}
         >
             <span className="flex items-center rounded-md text-sm px-4 py-2 ">
                 {showAddIcon && <img src={image} alt={image} className="pr-3" />}
