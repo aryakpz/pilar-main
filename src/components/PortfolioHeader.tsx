@@ -1,21 +1,24 @@
-import { useState } from "react"
 import { ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
 import { SearchBar } from "./SearchBar"
 import { getTimePeriodOfDay } from "../utils"
 
-export const PortfolioHeader = () => {
-    const [search, setSearch] = useState("")
+type HeaderProps = {
+    onSearchChange: (value: string) => void
+}
+
+export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
+
     const handleClick = () => { }
     const onSearch = (value: string) => {
-        setSearch(value)
+        onSearchChange(value)
     }
-    const timePeriod = getTimePeriodOfDay();
+    const greet = getTimePeriodOfDay();
 
     return (
         <div className="flex flex-col gap-3 mb-6">
             <h4 className="font-medium text-sm sm:text-lg text-gray-700">
-                Good {timePeriod}, Admin!
+                Good {greet}, Admin!
             </h4>
             <div className="flex justify-between items-center flex-wrap gap-2">
                 <h3 className="font-semibold text-3xl text-gray-900 ">All portfolio</h3>
@@ -34,5 +37,3 @@ export const PortfolioHeader = () => {
         </div>
     )
 }
-
-

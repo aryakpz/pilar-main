@@ -12,6 +12,6 @@ export const getTimePeriodOfDay = () => {
         return "Morning";
     } else if (hours < 16) {
         return "Afternoon";
-    } else
+    } else 
         return "Evening";
 };

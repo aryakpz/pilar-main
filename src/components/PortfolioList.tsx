@@ -1,13 +1,21 @@
 import { useJsonFetch } from "../hooks"
-import { OverViewCard } from "./OverViewCard"
+import { OverviewCard } from "../types";
+import { OverViewCard } from "./OverViewCard";
 
-export const PortfolioList = () => {
-    const { data } = useJsonFetch()
-    
+type PortfolioListProps = {
+    searchValue: string
+}
+
+export const PortfolioList: React.FC<PortfolioListProps> = ({ searchValue }) => {
+    const { data } = useJsonFetch();
+    const Portfoliolist = data?.cards.filter((item: OverviewCard) => (
+        item.title.toLowerCase().includes(searchValue.toLowerCase())
+    ))
+
     return (
         <div className="flex flex-wrap gap-5">
-            {data?.cards.map((item: any) => (
-             <OverViewCard item={item}/>
+            {Portfoliolist && Portfoliolist.map((item: OverviewCard) => (
+                <OverViewCard item={item} />
             ))}
         </div>
     )

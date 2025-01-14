@@ -17,4 +17,3 @@ export const LanguageSelector: React.FC<SelectProps> = ({ onSelectChange }) => (
         <span className="text-xs text-gray-500 pt-2 ">Note: Add details in English and Dutch to publish.</span>
     </div>
 )
-

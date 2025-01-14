@@ -1,12 +1,12 @@
 import React from "react";
 import clsx from "clsx";
-import image from '/assets/images/plus.svg'
 import { ButtonType, ButtonVariant } from "../types";
+import image from '/assets/images/plus.svg'
 
 export type ButtonProps = {
     label: string;
     style?: string;
-    type?: ButtonType
+    type?: ButtonType;
     variant?: ButtonVariant;
     showAddIcon:boolean;
     onClick: () => void;
