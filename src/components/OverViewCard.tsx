@@ -1,8 +1,8 @@
 import React from "react";
-import { Portfolio } from "../types";
+import { OverviewCard } from "../types";
 
 type ItemProps = {
-    item: Portfolio
+    item: OverviewCard
 }
 
 export const OverViewCard: React.FC<ItemProps> = ({ item }) => {

@@ -12,3 +12,8 @@ export enum Language {
     ENG = "English",
     DUT = "Dutch"
 }
+
+export enum SortSelect {
+    "ASC" = "A-Z",
+    "DES" = "Z-A"
+}

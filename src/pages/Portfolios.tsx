@@ -8,7 +8,7 @@ export const Portfolio: React.FC = () => {
     }
 
     return (
-        <div >
+        <div>
             <Header />
             <main className="w-full h-screen overflow-y-auto pt-10 bg-gray-100">
                 <div className="px-12 pb-5 sm:px-24 md:px-28 lg:px-36">
@@ -19,3 +19,4 @@ export const Portfolio: React.FC = () => {
         </div>
     )
 }
+
