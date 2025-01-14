@@ -8,8 +8,9 @@ export type ButtonProps = {
     onClick: () => void;
 }
 
-export type AssetTypes={
-    image:string;
-    title:string;
-    city:string;
+export type AssetTypes = {
+    id: number;
+    image: string;
+    title: string;
+    city: string;
 }
