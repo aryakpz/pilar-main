@@ -1,6 +1,6 @@
 import { StepperPageHeader } from "../components"
 
-export const AddPortfolis = () => {
+export const AddPortfolios = () => {
     return (
         <div>
             <StepperPageHeader

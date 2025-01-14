@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom"
-import { AddPortfolis } from "./pages"
+import { AddPortfolios } from "./pages"
 
 function App() {
   return (
       <Routes>
-         <Route path='/' element={<AddPortfolis/>}/>
+         <Route path='/addPortfolio' element={<AddPortfolios/>}/>
       </Routes>
   )
 }
