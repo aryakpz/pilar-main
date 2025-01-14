@@ -1,6 +1,6 @@
 import { useJsonFetch } from "../hooks"
-import { AssetTypes } from "../types";
-import { AssetCardView } from "./AssetCardView";
+import { OverviewCard } from "../types";
+import { OverViewCard } from "./OverViewCard";
 
 type FilterProps = {
     searchValue: string
@@ -8,16 +8,17 @@ type FilterProps = {
 
 export const AssetList: React.FC<FilterProps> = ({ searchValue }) => {
     const { data } = useJsonFetch();
-    const filterData = data?.assetCards.filter((item: AssetTypes) => (
+    const AssetList = data?.assetCards.filter((item: OverviewCard) => (
         item.title.toLowerCase().includes(searchValue.toLowerCase())
     ))
 
     return (
         <div className="flex flex-wrap gap-x-4 gap-y-5">
-            {filterData && filterData.map((item: AssetTypes, index: number) => (
-                <AssetCardView
+            {AssetList && AssetList.map((item: OverviewCard, index: number) => (
+                <OverViewCard
                     item={item}
-                    index={index} />
+                    index={index}
+                    type={false} />
             ))}
         </div>
     )
