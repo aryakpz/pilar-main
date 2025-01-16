@@ -6,11 +6,7 @@ function App() {
   return (
       <Routes>
          <Route path='/' element={<Portfolio/>}/>
-          
-         <Route>
          <Route path='/addAsset' element={<AddAsset/>}/>
-         </Route>
-
       </Routes>
   )
 }
