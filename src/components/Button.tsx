@@ -8,7 +8,7 @@ export type ButtonProps = {
     style?: string;
     type?: ButtonType;
     variant?: ButtonVariant;
-    showAddIcon:boolean;
+    showAddIcon: boolean;
     onClick: () => void;
 }
 
@@ -19,6 +19,11 @@ export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, var
             "bg-btn-white font-medium": variant === ButtonVariant.LIGHT,
         }
     )
+    const labelClass = clsx("flex items-center rounded-md text-sm",
+        {
+            "px-4 py-2": variant === ButtonVariant.DARK,
+            "px-3 py-1.5": variant === ButtonVariant.LIGHT
+        })
 
     return (
         <button
@@ -26,9 +31,9 @@ export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, var
             type={type}
             onClick={onClick}
         >
-            <span className="flex items-center rounded-md text-sm px-4 py-2">
-                {showAddIcon && <img src={image} alt={image}  />}
-                <span className="pl-3 text-xs sm:text-sm">{label}</span>
+            <span className={labelClass}>
+                {showAddIcon && <img src={image} alt={image} className="pl-3" />}
+                <span className="text-xs sm:text-sm">{label}</span>
             </span>
         </button>
     );
