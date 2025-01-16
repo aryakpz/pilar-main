@@ -1,23 +1,47 @@
+import { useState } from "react";
 import { useJsonFetch } from "../hooks"
-import { AssetTypes } from "../types";
-import { AssetCardView } from "./AssetCardView";
+import { OverviewCard, SortSelect } from "../types";
+import { OverViewCard } from "./OverViewCard";
+import { SearchBar } from "./SearchBar";
+import { SortSelector } from "./SortSelectbox";
 
-type AssetProps = {
-    searchValue: string
-}
-
-export const AssetList: React.FC<AssetProps> = ({ searchValue }) => {
+export const AssetList: React.FC = () => {
+    const [searchValue, setSearchValue] = useState<string>("")
+    const [sortType, setSortType] = useState<SortSelect>(SortSelect.ASC)
     const { data } = useJsonFetch();
-    const assets = data?.assetCards.filter((item: AssetTypes) => (
-        item.title.toLowerCase().includes(searchValue.toLowerCase())
-    ))
+
+    const onSearch = (value: string) => {
+        setSearchValue(value)
+    }
+    const handleSort = (value: SortSelect) => {
+        setSortType(value)
+    }
+
+    const assets = data?.assetCards
+        ?.filter((item: OverviewCard) => (
+            item.title.toLowerCase().includes(searchValue.toLowerCase())
+        ))
+        ?.sort((a: OverviewCard, b: OverviewCard) => {
+            if (sortType === SortSelect.DES) {
+                return b.title.localeCompare(a.title)
+            }
+            else
+                return a.title.localeCompare(b.title)
+        })
 
     return (
-        <div className="flex flex-wrap gap-x-4 gap-y-5">
-            {assets && assets.map((item: AssetTypes) => (
-                <AssetCardView item={item} key={item.id} />
-            ))}
-        </div>
+        <>
+            <div className="flex justify-between items-center gap-2 flex-wrap">
+                <SearchBar onSearch={onSearch} />
+                <SortSelector handleSort={handleSort} />
+            </div>
+            <div className="mt-4 mb-6 h-px bg-gray-200"></div>
+            <div className="flex flex-wrap gap-x-4 gap-y-5">
+                {assets?.map((item: OverviewCard) => (
+                    <OverViewCard item={item} key={item.id} />
+                ))}
+            </div>
+        </>
     )
 }
 

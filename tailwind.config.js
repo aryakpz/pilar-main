@@ -14,9 +14,11 @@ export default {
         'down-arrow':"url('/assets/images/downArrow.svg')",
       },
       backgroundPosition:{
-        'arrow-position':'right 0.8rem center',
+        'arrow-position':'right 0.2rem center',
+      },
+      backgroundSize:{
+        "size":'1.3rem 1.3rem',
       }
-
     },
   },
   plugins: [],

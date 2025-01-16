@@ -5,7 +5,7 @@ type OverviewProps = {
     details?: string
 }
 
-export const OverViewCard: React.FC<OverviewProps> = ({ count, data, details }) => {
+export const CardOverView: React.FC<OverviewProps> = ({ count, data, details }) => {
     return (
         <div className="flex-1 h-44">
             <div className="p-6 shadow-md rounded-lg h-full bg-white w-full flex flex-col">

@@ -69,6 +69,25 @@
       "city": "test city"
     }
   ],
+  "OverViewCardData": [
+    {
+      "id": 1,
+      "count": 254,
+      "data": "Total apartments",
+      "details": "26 assets"
+    },
+    {
+      "id": 2,
+      "count": 68,
+      "data": "Vacant"
+    },
+    {
+      "id": 3,
+      "count": 292,
+      "data": "Moved in",
+      "details": "270 waiting to move in"
+    }
+  ],
   "countries": [
     "Afghanistan",
     "Albania",

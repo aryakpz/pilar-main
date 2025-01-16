@@ -1,22 +1,19 @@
 import { useState } from "react";
 import { useJsonFetch } from "../hooks";
 import { Button } from "./Button";
-import { ButtonType, ButtonVariant } from "../types";
-import { useNavigate } from "react-router-dom";
+import { AssetList, ButtonType, ButtonVariant } from "../types";
 
 type ButtonIdProps = {
-    onSelect: (value: string) => void;
+    onSelect: (value: AssetList) => void;
 };
 
 export const AssetInnterButton: React.FC<ButtonIdProps> = ({ onSelect }) => {
-    const nav = useNavigate()
     const { data } = useJsonFetch();
-    const [activeButton, setActiveButton] = useState<string | null>("list");
+    const [activeButton, setActiveButton] = useState<AssetList>(AssetList.LIST);
 
-    const handleClick = (id: string) => {
+    const handleClick = (id: AssetList) => {
         setActiveButton(id);
         onSelect(id);
-        nav(id)
     };
 
     return (

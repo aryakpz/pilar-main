@@ -8,9 +8,16 @@ export type ButtonProps = {
     onClick: () => void;
 }
 
-export type AssetTypes = {
+export type OverviewCard = {
     id: number;
     image: string;
     title: string;
     city: string;
+}
+
+export type CardOverViewType = {
+    id: number,
+    count: number,
+    data: string,
+    details?: string
 }

@@ -1,22 +1,19 @@
-import { OverViewCard } from "./OverviewCards"
+import { useJsonFetch } from "../hooks"
+import { CardOverViewType } from "../types"
+import { CardOverView } from "./CardOverView"
 
 export const AssetOverview: React.FC = () => {
+    const { data } = useJsonFetch()
+
     return (
         <div className="my-8 flex flex-wrap gap-4">
-            <OverViewCard
-                count={254}
-                data="Total apartments"
-                details="26 assets"
-            />
-            <OverViewCard
-                count={68}
-                data="Vacant"
-            />
-            <OverViewCard
-                count={292}
-                data="Moved in"
-                details="270 waiting to move in"
-            />
+            {data?.OverViewCardData.map((item: CardOverViewType) => (
+                <CardOverView
+                    key={item.id}
+                    count={item.count}
+                    data={item.data}
+                    details={item.details} />
+            ))}
         </div>
     )
 }

@@ -1,23 +1,20 @@
-import { ButtonType, ButtonVariant } from "../types"
+import { AssetList, ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
-import { SearchBar } from "./SearchBar"
 import { getTimePeriodOfDay } from "../utils"
 import { AssetInnterButton } from "./AssetInnerButton"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
-type HeaderProps = {
-    onSearchChange: (value: string) => void
-}
-
-export const AssetHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
-    const [activeBtn, setActiveBtn] = useState<string>('list')
-    const handleClick = () => { }
-    const onSearch = (value: string) => {
-        onSearchChange(value)
+export const AssetHeader: React.FC = () => {
+    const nav = useNavigate()
+    const [activeBtn, setActiveBtn] = useState<AssetList>(AssetList.LIST)
+    const handleClick = () => {
+        nav('/addAsset')
     }
     const greet = getTimePeriodOfDay();
-    const handleSelect = (id: string) => {
+    const handleSelect = (id: AssetList) => {
         setActiveBtn(id)
+        nav(`/assets/${id.toLowerCase()}`);
     }
 
     return (
@@ -28,7 +25,7 @@ export const AssetHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
                 </h4>
                 <div className="flex justify-between items-center flex-wrap gap-2">
                     <AssetInnterButton onSelect={handleSelect} />
-                    {activeBtn === 'list' &&
+                    {activeBtn === AssetList.LIST &&
                         <Button
                             label="New Asset"
                             type={ButtonType.BUTTON}
@@ -38,13 +35,6 @@ export const AssetHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
                         />}
                 </div>
             </div>
-            {activeBtn === 'list' &&
-                <>
-                    <div className="flex justify-between items-center gap-2 flex-wrap">
-                        <SearchBar onSearch={onSearch} />
-                    </div>
-                    <div className="mt-4 mb-6 h-px bg-gray-200"></div></>
-            }
         </>
     )
 }
