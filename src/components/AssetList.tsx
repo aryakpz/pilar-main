@@ -7,7 +7,7 @@ import { SortSelector } from "./SortSelectbox";
 
 export const AssetList: React.FC = () => {
     const [searchValue, setSearchValue] = useState<string>("")
-    const [sortType, setSortType] = useState<SortSelect>(SortSelect.ASC)
+    const [sortType, setSortType] = useState('')
     const { data } = useJsonFetch();
 
     const onSearch = (value: string) => {
@@ -25,10 +25,10 @@ export const AssetList: React.FC = () => {
             if (sortType === SortSelect.DES) {
                 return b.title.localeCompare(a.title)
             }
-            else
+            else if ((sortType === SortSelect.ASC))
                 return a.title.localeCompare(b.title)
         })
-
+      
     return (
         <>
             <div className="flex justify-between items-center gap-2 flex-wrap">
