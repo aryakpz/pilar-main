@@ -5,7 +5,7 @@ function App() {
 
   return (
       <Routes>
-         <Route path='/overview' element={<AssetOverview/>}/>
+         <Route path='/' element={<AssetOverview/>}/>
       </Routes>
   )
 }
