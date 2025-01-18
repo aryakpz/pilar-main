@@ -22,3 +22,11 @@ export enum OccupanyType {
     "FULL" = "Fully Occupied",
     "PARTIL" = "Partially Occupied"
 }
+
+export enum PageCountType {
+    TWENTYFFIVE = 25,
+    FIFTY = 50,
+    HUNDRED = 100
+
+
+}

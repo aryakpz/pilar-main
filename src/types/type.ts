@@ -1,3 +1,5 @@
+import { PageCountType } from "./enum";
+
 export type OverviewCard = {
     id: number;
     image: string;
@@ -31,4 +33,10 @@ export type OfficeDataType = {
     rooms: number,
     rent: number,
     occupancy: boolean
+}
+
+export type PageCountValueType = {
+    id: number,
+    value: PageCountType
+
 }
