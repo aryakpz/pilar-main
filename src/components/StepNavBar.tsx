@@ -18,7 +18,7 @@ export const StepNavBar = () => {
                 label="Show all assets"
                 variant={ButtonVariant.LIGHT}
                 showAddIcon={false}
-                style="border border-zinc-300 bg-white p-0.5"
+                style=" border-zinc-300 bg-white p-0.5"
                 onClick={handlechange}
             />
         </div>

@@ -422,5 +422,121 @@
       "title": "Serve U Well",
       "city": "amsterdam • eur"
     }
+  ],
+  "tableHead": [
+    {
+      "id": 1,
+      "title": "sub-asset"
+    },
+    {
+      "id": 2,
+      "title": "number"
+    },
+    {
+      "id": 3,
+      "title": "volume",
+      "position": "center"
+    },
+    {
+      "id": 4,
+      "title": "total rooms",
+      "position": "center"
+    },
+    {
+      "id": 5,
+      "title": "rental fee",
+      "position": "center"
+    },
+    {
+      "id": 6,
+      "title": "occupancy"
+    },
+    {
+      "id": 7,
+      "title": "action"
+    }
+  ],
+  "officeData": [
+    {
+      "id": 1,
+      "subAsset": "Test Sub-Asset 4",
+      "number": "office-01",
+      "volume": 200,
+      "rooms": 10,
+      "rent": 1000,
+      "occupancy": false
+    },
+    {
+      "id": 2,
+      "subAsset": "Change= NW",
+      "number": "Test Office",
+      "volume": 2,
+      "rooms": 3,
+      "rent": 21,
+      "occupancy": true
+    },
+    {
+      "id": 3,
+      "subAsset": "Tower H",
+      "number": "Elizabeth Cady Stantonplein 8",
+      "volume": 34,
+      "rooms": 1,
+      "rent": 711,
+      "occupancy": true
+    },
+    {
+      "id": 4,
+      "subAsset": "Tower H",
+      "number": "Elizabeth Cady Stantonplein 10",
+      "volume": 34,
+      "rooms": 8,
+      "rent": 725,
+      "occupancy": true
+    },
+    {
+      "id": 5,
+      "subAsset": "Tower H",
+      "number": "Elizabeth Cady Stantonplein 6",
+      "volume": 94,
+      "rooms": 5,
+      "rent": 734,
+      "occupancy": true
+    },
+    {
+      "id": 6,
+      "subAsset": "sub-asset-1a",
+      "number": "Elizabeth Cady Stantonplein 6",
+      "volume": 200,
+      "rooms": 12,
+      "rent": 2000,
+      "occupancy": false
+    },
+    {
+      "id": 7,
+      "subAsset": "EventTenantTest",
+      "number": "Elizabeth Cady Stantonplein 7",
+      "volume": 1111,
+      "rooms": 12,
+      "rent": 1200,
+      "occupancy": true
+    },
+    {
+      "id": 8,
+      "subAsset": "Slytherin SBL",
+      "number": "Office 1",
+      "volume": 1354,
+      "rooms": 4,
+      "rent": 654,
+      "occupancy": true
+    },
+    {
+      "id": 9,
+      "subAsset": "SBL litterlake",
+      "number": "test",
+      "volume": 348,
+      "rooms": 12,
+      "rent": 1000,
+      "occupancy": true
+    }
   ]
 }

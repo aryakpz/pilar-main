@@ -1,25 +1,28 @@
 import { useState } from "react";
 import { LeftSideBarType } from "../types";
 import { DropdownMenu } from "./DropdownMenu";
+import { useNavigate } from "react-router-dom";
 
 type SideBarItemType = {
     item: LeftSideBarType;
 };
 
 export const SideBarItem: React.FC<SideBarItemType> = ({ item }) => {
-    const [activeBtn, setActiveBtn] = useState<string | null>(null);
+    const nav = useNavigate()
+    const [activeBtn, setActiveBtn] = useState<string | null>("Overview");
 
     const handleDropdownClick = (title: string) => {
         setActiveBtn((prev) => (prev === title ? null : title));
     };
 
-    const handleTitleClick = (title: string) => { 
-        console.log(title)
+    const handleTitleClick = (title: string) => {
+        { title === "Office" ? nav(title) : nav('notfound') }
     }
+
     return (
-        <a>
+        <a className={`${item.title === activeBtn ? "bg-gray-100" : "bg-transparent"}`}>
             <button
-                className={`w-full hover:bg-gray-100 rounded-lg flex items-center false ${item.dropDown ? "group p-2" : "my-2  px-2 pb-1.5 pt-1.5  "}`}
+                className={`w-full hover:bg-gray-100 rounded-lg flex items-center false ${item.dropDown ? "group p-2" : "my-2  px-2 pb-1.5 pt-1.5  "} `}
                 onClick={() => { item.dropDown ? handleDropdownClick(item.title) : handleTitleClick(item.title) }}>
                 <span className="w-7">
                     <img src={item.image} alt={`${item.title} icon`} />
@@ -37,7 +40,7 @@ export const SideBarItem: React.FC<SideBarItemType> = ({ item }) => {
                     </span>
                 )}
             </button>
-            {activeBtn === item.title &&  <DropdownMenu menu={item.menu} onItemClick={handleTitleClick} />}
+            {activeBtn === item.title && <DropdownMenu menu={item.menu} onItemClick={handleTitleClick} />}
         </a>
     );
 };

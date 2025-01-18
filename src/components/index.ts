@@ -7,4 +7,6 @@ export * from './PortfolioList';
 export * from './PortfolioHeader';
 export * from './StepNavBar';
 export * from './AssetOverviewMain';     
-export * from './DropdownMenu'
+export * from './DropdownMenu';
+export * from './NotFound';
+export * from './OfficeHomePage';

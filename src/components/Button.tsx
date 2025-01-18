@@ -39,7 +39,7 @@ export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, var
                         <img src={supportImg} alt={supportImg} className="ml-2 h-5 w-5 " />
                     </span>
                     : <>
-                        {showAddIcon && <img src={image} alt={image} className="pl-3" />}
+                        {showAddIcon && <img src={image} alt={image} className="pr-3" />}
                         <span className="text-xs sm:text-sm">{label}</span>
                     </>
                 }
