@@ -17,3 +17,8 @@ export enum SortSelect {
     "ASC" = "A-Z",
     "DES" = "Z-A"
 }
+
+export enum OccupanyType {
+    "FULL" = "Fully Occupied",
+    "PARTIL" = "Partially Occupied"
+}

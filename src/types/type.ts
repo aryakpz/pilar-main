@@ -16,3 +16,19 @@ export type MenuType = {
     id: number;
     data: string
 }[]
+
+export type TowersType = {
+    id: number;
+    title: string;
+    position?: string
+}
+
+export type OfficeDataType = {
+    id: number,
+    subAsset: string,
+    number: string,
+    volume: number,
+    rooms: number,
+    rent: number,
+    occupancy: boolean
+}
