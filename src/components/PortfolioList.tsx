@@ -1,29 +1,21 @@
 import { useJsonFetch } from "../hooks"
-import { OverviewCard, SortSelect } from "../types";
+import { OverviewCard } from "../types";
 import { OverViewCard } from "./OverViewCard";
 
 type PortfolioListProps = {
-    searchValue: string;
-    sortType: SortSelect
+    searchValue: string
 }
 
-export const PortfolioList: React.FC<PortfolioListProps> = ({ searchValue, sortType }) => {
+export const PortfolioList: React.FC<PortfolioListProps> = ({ searchValue }) => {
     const { data } = useJsonFetch();
-    const Portfoliolist = data?.cards
-        ?.filter((item: OverviewCard) =>
-            item.title.toLowerCase().includes(searchValue.toLowerCase())
-        )
-        ?.sort((a: OverviewCard, b: OverviewCard) => {
-            if (sortType === SortSelect.DES) {
-                return b.title.localeCompare(a.title);
-            } else
-                return a.title.localeCompare(b.title);
-        });
+    const Portfoliolist = data?.cards.filter((item: OverviewCard) => (
+        item.title.toLowerCase().includes(searchValue.toLowerCase())
+    ))
 
     return (
         <div className="flex flex-wrap gap-5">
             {Portfoliolist && Portfoliolist.map((item: OverviewCard) => (
-                <OverViewCard item={item} key={item.id} />
+                <OverViewCard item={item} />
             ))}
         </div>
     )
