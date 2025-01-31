@@ -9,9 +9,9 @@ type HeaderProps = {
 }
 
 export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
-const nav=useNavigate()
+    const nav=useNavigate()
     const handleClick = () => {
-        nav('/addPortfolio')
+        nav('/addportfolio')
      }
     const onSearch = (value: string) => {
         onSearchChange(value)
