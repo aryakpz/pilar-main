@@ -1,10 +1,10 @@
 import { AddPortfolioFormBody } from "../components"
-import { PortfolioFormNav } from "../components"
+import { StepperPageHeader } from "../components/StepperPageHeader"
 
-export const AddPortfolis = () => {
+export const AddPortfolios = () => {
     return (
         <div className="bg-gray-100 h-full">
-            <PortfolioFormNav />
+            <StepperPageHeader text="Adding Portfolios" />
             <AddPortfolioFormBody />
         </div>
     )

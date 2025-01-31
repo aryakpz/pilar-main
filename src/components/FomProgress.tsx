@@ -4,6 +4,7 @@ import { ProgressbarType } from "../types"
 type ProgressProps = {
     isActive: boolean,
     type: ProgressbarType,
+    onClick?:(value:string)=>void
 }
 
 export const ProgressBar: React.FC<ProgressProps> = ({ isActive, type }) => {
