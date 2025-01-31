@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { Portfolio } from "./pages"
+import { Assets, Portfolio } from "./pages"
 import { AddPortfolios } from "./pages"
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <Routes>
          <Route path='/' element={<Portfolio/>}/>
          <Route path='/addportfolio' element={<AddPortfolios/>}/>
+         <Route path='/assets' element={<Assets/>}/>
       </Routes>
   )
 }

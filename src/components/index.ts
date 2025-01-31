@@ -4,9 +4,11 @@ export * from './SelectBox';
 export * from './languageSelectbox';
 export * from './SearchBar';
 export * from './AddPortfolioBody';
+export * from './StepperPageHeader';
 export * from './CurrencySelectbox';
 export * from './DateFormatSelectbox';
 export * from './MeasurementSelectbox';
-export * from './StepperPageHeader';
+export * from './AssetHeader';
+export * from './Tabs'
 export * from './PortfolioHeader';
-export  * from './PortfolioList';
+export * from './PortfolioList';

@@ -1,4 +1,18 @@
 {
+  "assetview": [
+    {
+      "name": "Portfolio Assets",
+      "id": "list"
+    },
+    {
+      "name": "Portfolio Overview",
+      "id": "view"
+    },
+    {
+      "name": "Dashboard",
+      "id": "dashboard"
+    }
+  ],
   "countries": [
     "Afghanistan",
     "Albania",
@@ -194,67 +208,5 @@
     "Yemen",
     "Zambia",
     "Zimbabwe"
-  ],
-  "cards": [
-    {
-      "id": "1",
-      "image": "assets/card-image/Beauvastgoed1.jpg",
-      "title": "Beauvastgoed Beheer",
-      "city": "alphen aan den rijn • eur"
-    },
-    {
-      "id": "2",
-      "image": "assets/card-image/park.png",
-      "title": "Breevast",
-      "city": "amsterdam • usd"
-    },
-    {
-      "id": "3",
-      "image": "assets/card-image/change.png",
-      "title": "Change=",
-      "city": "amsterdam • eur"
-    },
-    {
-      "id": "4",
-      "image": "assets/card-image/Dalpha.png",
-      "title": "Dalpha Real Estate",
-      "city": "laren • eur"
-    },
-    {
-      "id": "5",
-      "image": "assets/card-image/DemoBuild.jpg",
-      "title": "Demo Builder 1",
-      "city": "test city • eur"
-    },
-    {
-      "id": "6",
-      "image": "assets/card-image/Domus.png",
-      "title": "Domus",
-      "city": "amsterdam • eur"
-    },
-    {
-      "id": "7",
-      "image": "assets/card-image/iqb.png",
-      "title": "IQBI",
-      "city": "city_demo • eur"
-    },
-    {
-      "id": "8",
-      "image": "assets/card-image/pilar.png",
-      "title": "Pilar",
-      "city": "amsterdam • eur"
-    },
-    {
-      "id": "9",
-      "image": "assets/card-image/pms.jpg",
-      "title": "PMS Test Building",
-      "city": "test • eur"
-    },
-    {
-      "id": "10",
-      "image": "assets/card-image/Serveuwell.png",
-      "title": "Serve U Well",
-      "city": "amsterdam • eur"
-    }
   ]
 }

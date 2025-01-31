@@ -1,21 +1,20 @@
 import { useState } from "react";
-import { Header, PortfolioList, PortfolioHeader } from "../components";
+import { Header, AssetHeader } from "../components";
 
-export const Portfolio: React.FC = () => {
+export const Assets: React.FC = () => {
     const [searchValue, setSearchValue] = useState<string>("")
     const handleSearch = (value: string) => {
         setSearchValue(value)
     }
-    
+
     return (
-        <div>
+        <div >
             <Header />
             <main className="w-full h-screen overflow-y-auto pt-10 bg-gray-100">
                 <div className="px-12 pb-5 sm:px-24 md:px-28 lg:px-36">
-                    <PortfolioHeader onSearchChange={handleSearch} />
-                    <PortfolioList searchValue={searchValue} />
+                    <AssetHeader onSearchChange={handleSearch} />
                 </div>
             </main>
         </div>
     )
-}   
+}
