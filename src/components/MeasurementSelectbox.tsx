@@ -12,13 +12,13 @@ const measurementTypeData = [
 
 export const MeasuremtSelectbox: React.FC<MeasurementProps> = ({ handleSelectMeasurement }) => {
     return (
-        <div className="flex-1 md:basic-1/2 pr-6">
+        <div className="w-full md:basis-1/2 pr-6">
             <div className="flex flex-col gap-2 w-full">
-                <label className="font-medium text-sm text-gray-900">Choose Measurement</label>
+                <label className="font-medium text-sm text-gray-900">Measurements</label>
                 <div className="flex">
                     <div className="relative w-full">
                         <select
-                            className="block w-full border rounded-lg p-2.5 text-sm appearance-none bg-white bg-down-arrow bg-no-repeat bg-size pr-5 bg-arrow-position"
+                            className="block w-full border rounded-lg p-2.5 text-sm appearance-none bg-slate-50 bg-down-arrow bg-no-repeat bg-size pr-5 bg-arrow-position"
                             onChange={(e) => handleSelectMeasurement(e.target.value as MeasurementType)}
                         >
                             <option value="" hidden></option>
