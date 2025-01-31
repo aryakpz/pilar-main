@@ -7,7 +7,7 @@ export * from './AddPortfolioBody';
 export * from './StepperPageHeader';
 export * from './CurrencySelectbox';
 export * from './DateFormatSelectbox';
-export * from './MeasurementSelectbox';;
+export * from './MeasurementSelectbox';
 export * from './AssetHeader';
 export * from './Tabs'
 export * from './PortfolioHeader';
