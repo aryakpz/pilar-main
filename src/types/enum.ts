@@ -18,3 +18,7 @@ export enum ProgressbarType {
     END = "end",
     MID = "mid"
 }
+export enum SortSelect {
+    "ASC" = "A-Z",
+    "DES" = "Z-A"
+}
