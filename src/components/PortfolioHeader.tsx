@@ -2,14 +2,17 @@ import { ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
 import { SearchBar } from "./SearchBar"
 import { getTimePeriodOfDay } from "../utils"
+import { useNavigate } from "react-router-dom"
 
 type HeaderProps = {
     onSearchChange: (value: string) => void
 }
 
 export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
-
-    const handleClick = () => { }
+    const nav=useNavigate()
+    const handleClick = () => {
+        nav('/addportfolio')
+     }
     const onSearch = (value: string) => {
         onSearchChange(value)
     }
