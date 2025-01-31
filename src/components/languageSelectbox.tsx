@@ -1,4 +1,4 @@
-import { Language } from "../types/enum"
+import { Language } from "../types"
 
 type LanguageProps = {
     handleLanguage: (value: Language) => void

@@ -36,3 +36,8 @@ export enum DateFormatType {
     DMY = "dd/mm/yy",
     MDY = "mm/dd/yy"
 }
+
+export enum SortSelect {
+    "ASC" = "A-Z",
+    "DES" = "Z-A"
+}
