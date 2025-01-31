@@ -6,6 +6,7 @@ export const Portfolio: React.FC = () => {
     const handleSearch = (value: string) => {
         setSearchValue(value)
     }
+    console.log(234)
     
     return (
         <div>
@@ -16,6 +17,6 @@ export const Portfolio: React.FC = () => {
                     <PortfolioList searchValue={searchValue} />
                 </div>
             </main>
-        </div>
+        </div>        
     )
 }   

@@ -8,13 +8,13 @@ type PortfolioListProps = {
 
 export const PortfolioList: React.FC<PortfolioListProps> = ({ searchValue }) => {
     const { data } = useJsonFetch();
-    const Portfoliolist = data?.cards.filter((item: OverviewCard) => (
+    const portfoliolist = data?.cards?.filter((item: OverviewCard) => (
         item.title.toLowerCase().includes(searchValue.toLowerCase())
     ))
 
     return (
         <div className="flex flex-wrap gap-5">
-            {Portfoliolist && Portfoliolist.map((item: OverviewCard) => (
+            {portfoliolist?.map((item: OverviewCard) => (
                 <OverViewCard item={item} />
             ))}
         </div>

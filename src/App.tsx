@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { Assets, Portfolio } from "./pages"
-import { AddPortfolios } from "./pages"
+import { AddPortfolios, Assets, Portfolio } from "./pages"
 
 function App() {
 
@@ -13,4 +12,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

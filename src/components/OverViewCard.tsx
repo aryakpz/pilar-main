@@ -1,13 +1,19 @@
 import React from "react";
 import { OverviewCard } from "../types";
+import { useNavigate } from "react-router-dom";
 
 type ItemProps = {
     item: OverviewCard
 }
 
 export const OverViewCard: React.FC<ItemProps> = ({ item }) => {
+    const nav=useNavigate()
+    const handleCardClick=()=>{
+       nav('/assets')
+    }
+    
     return (
-        <div key={item.id} className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 ">
+        <div key={item.id} className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 " onClick={handleCardClick}>
             <img alt={item.image} className="p-4 h-44 w-full object-contain rounded-lg" src={item.image} />
             <div className="flex flex-col p-4 pt-0">
                 <div className="flex items-center">
