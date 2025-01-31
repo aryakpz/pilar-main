@@ -1,13 +1,13 @@
 import clsx from "clsx"
 import { ProgressbarType } from "../types"
 
-type ProgressBarProps = {
+type ProgressProps = {
     isActive: boolean,
     type: ProgressbarType,
-    onClick:(value:string)=>void
+    onClick?:(value:string)=>void
 }
 
-export const ProgressBar: React.FC<ProgressBarProps> = ({ isActive, type,onClick }) => {
+export const ProgressBar: React.FC<ProgressProps> = ({ isActive, type }) => {
     const buttonClass = clsx("rounded-full flex justify-center items-center border-2  box-content",
         {
             "w-6 h-6 border-gray-800": isActive === true,
@@ -23,9 +23,10 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ isActive, type,onClick
 
     return (
         <div className='flex w-full items-center my-auto h-full'>
+
             {type === ProgressbarType.END ? <div className='h-px w-6 bg-gray-300'></div> : ''}
             <div className='flex items-center'>
-                <button className={buttonClass} onClick={()=>onClick(`${isActive}`)}>
+                <button className={buttonClass}>
                     <div className={divClass}></div>
                 </button>
             </div>

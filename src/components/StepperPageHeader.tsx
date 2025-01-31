@@ -49,7 +49,3 @@ export const StepperPageHeader: React.FC<StepperPageProps> = ({ text }) => {
     )
 
 }
-
-
-
-
