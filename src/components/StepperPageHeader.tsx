@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ProgressbarType } from '../types'
-import { ProgressBar } from './FomProgress'
 import arrow from '/assets/images/left-arrow.svg'
+import { ProgressBar } from './FormProgress';
 
 type StepperPageProps = {
     text: string;

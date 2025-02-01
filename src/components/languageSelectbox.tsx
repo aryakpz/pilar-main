@@ -1,13 +1,8 @@
-import { Language } from "../types"
+import { Language } from "../types/enum"
 
 type LanguageProps = {
     handleLanguage: (value: Language) => void
 }
-
-const languageData = [
-    { id: 1, value: Language.ENG },
-    { id: 2, value: Language.DUT }
-]
 
 export const LanguageSelector: React.FC<LanguageProps> = ({ handleLanguage }) => (
     <div className="w-1/2">
@@ -16,9 +11,8 @@ export const LanguageSelector: React.FC<LanguageProps> = ({ handleLanguage }) =>
             <select
                 className="block w-full border bg-white border-gray-300 text-gray-900 rounded-lg p-2.5 appearance-none text-sm bg-down-arrow bg-no-repeat bg-size pr-5 bg-arrow-position"
                 onChange={(e) => handleLanguage(e.target.value as Language)}>
-                {languageData.map((item) => (
-                    <option value={item.value} key={item.id}>{item.value}</option>
-                ))}
+                <option value={Language.ENG}>{Language.ENG}</option>
+                <option value={Language.DUT}>{Language.DUT}</option>
             </select>
         </div>
         <span className="text-xs text-gray-500">Note: Add details in English and Dutch to publish.</span>

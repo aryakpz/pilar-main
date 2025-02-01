@@ -8,17 +8,16 @@ export type ButtonProps = {
     style?: string;
     type?: ButtonType;
     variant?: ButtonVariant;
-    showAddIcon: boolean;
-    onClick: (value?: any) => void;
+    showAddIcon:boolean;
+    onClick: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick = () => { }, variant, showAddIcon }) => {
-    const buttonClass = clsx("flex items-center rounded-lg text-sm p-0.5 border border-transparent",
+export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, variant, showAddIcon }) => {
+    const buttonClass = clsx(style, "flex items-center rounded-md text-sm p-0.5 border border-transparent ",
         {
             "bg-btn-black text-white font-medium": variant === ButtonVariant.DARK,
-            "font-medium border-none mt-[-1px]": variant === ButtonVariant.LIGHT,
-        },
-        style
+            "font-medium": variant === ButtonVariant.LIGHT,
+        }
     )
 
     return (
@@ -28,7 +27,7 @@ export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick = ()
             onClick={onClick}
         >
             <span className="flex items-center rounded-md text-sm px-4 py-2">
-                {showAddIcon && <img src={image} alt={image} className="pr-3"/>}
+                {showAddIcon && <img src={image} alt={image}  className="pr-3"/>}
                 <span className="text-xs sm:text-sm">{label}</span>
             </span>
         </button>
