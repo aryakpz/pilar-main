@@ -1,290 +1,195 @@
 {
-  "assetview": [
-    {
-      "name": "Portfolio Assets",
-      "id": "list"
-    },
-    {
-      "name": "Portfolio Overview",
-      "id": "view"
-    },
-    {
-      "name": "Dashboard",
-      "id": "dashboard"
-    }
-  ],
-  "assetCards": [
+  "leftBarItem": [
     {
       "id": 1,
-      "image": "/assets/card-images/img-1.png",
-      "title": "Houthaven",
-      "city": "Amsterdam"
+      "image": "assets/images/overview.svg",
+      "title": "Overview"
     },
     {
       "id": 2,
-      "image": "/assets/card-images/img-2.png",
-      "title": "asdas",
-      "city": "Sadas"
+      "image": "assets/images/dashboard.svg",
+      "title": "Dashboard"
     },
     {
       "id": 3,
-      "image": "/assets/card-images/img-3.jpg",
-      "title": "asset 1",
-      "city": "fdgfd"
+      "image": "assets/images/asset.svg",
+      "title": "Asset",
+      "dropDown": "assets/images/downArrow.svg",
+      "menu": [
+        {
+          "id": 1,
+          "data": "Sub-asset"
+        },
+        {
+          "id": 2,
+          "data": "Apartment"
+        },
+        {
+          "id": 3,
+          "data": "Archived Apartment"
+        },
+        {
+          "id": 4,
+          "data": "Parking"
+        },
+        {
+          "id": 5,
+          "data": "Office"
+        },
+        {
+          "id": 6,
+          "data": "Retail"
+        },
+        {
+          "id": 7,
+          "data": "Facilities"
+        }
+      ]
     },
     {
       "id": 4,
-      "image": "/assets/card-images/img-4.jpg",
-      "title": "builder admin test 1 sbl",
-      "city": "leiden"
+      "image": "assets/images/phonebook.svg",
+      "title": "Phonebook"
     },
     {
       "id": 5,
-      "image": "/assets/card-images/img-5.jpeg",
-      "title": "Galaxy Apartments",
-      "city": "bangalore"
+      "image": "assets/images/members.svg",
+      "title": "Members",
+      "dropDown": "assets/images/downArrow.svg",
+      "menu": [
+        {
+          "id": 1,
+          "data": "Tenanats"
+        },
+        {
+          "id": 2,
+          "data": "Archived Tenants"
+        },
+        {
+          "id": 3,
+          "data": "Office Members"
+        },
+        {
+          "id": 4,
+          "data": "Retail Members"
+        },
+        {
+          "id": 5,
+          "data": "Parking Members"
+        }
+      ]
     },
     {
       "id": 6,
-      "image": "/assets/card-images/img-6.jpg",
-      "title": "Hill View",
-      "city": "xyz"
+      "image": "assets/images/community.svg",
+      "title": "Community",
+      "dropDown": "assets/images/downArrow.svg",
+      "menu": [
+        {
+          "id": 1,
+          "data": "Feeds"
+        },
+        {
+          "id": 2,
+          "data": "Groups"
+        },
+        {
+          "id": 3,
+          "data": "Events"
+        }
+      ]
     },
     {
       "id": 7,
-      "image": "/assets/card-images/img-7.jpeg",
-      "title": "mars",
-      "city": "riccaton"
+      "image": "assets/images/communication.svg",
+      "title": "Communication",
+      "dropDown": "assets/images/downArrow.svg",
+      "menu": [
+        {
+          "id": 1,
+          "data": "News"
+        },
+        {
+          "id": 2,
+          "data": "Archived News"
+        },
+        {
+          "id": 3,
+          "data": "Messages"
+        }
+      ]
     },
     {
       "id": 8,
-      "image": "/assets/card-images/img-8.jpg",
-      "title": "New asset",
-      "city": "test"
+      "image": "assets/images/booking.svg",
+      "title": "Bookings"
     },
     {
       "id": 9,
-      "image": "/assets/card-images/img-9.jpeg",
-      "title": "Office Naarden",
-      "city": "test city"
-    }
-  ],
-  "OverViewCardData": [
-    {
-      "id": 1,
-      "count": 254,
-      "data": "Total apartments",
-      "details": "26 assets"
+      "image": "assets/images/tickets.svg",
+      "title": "Tickets",
+      "dropDown": "assets/images/downArrow.svg",
+      "menu": [
+        {
+          "id": 1,
+          "data": "Archived Tickets"
+        }
+      ]
     },
     {
-      "id": 2,
-      "count": 68,
-      "data": "Vacant"
+      "id": 10,
+      "image": "assets/images/consumption.svg",
+      "title": "Consumption",
+      "dropDown": "assets/images/downArrow.svg",
+      "menu": [
+        {
+          "id": 1,
+          "data": "Configurations"
+        }
+      ]
     },
     {
-      "id": 3,
-      "count": 292,
-      "data": "Moved in",
-      "details": "270 waiting to move in"
+      "id": 11,
+      "image": "assets/images/settings.svg",
+      "title": "Settings",
+      "dropDown": "assets/images/downArrow.svg",
+      "menu": [
+        {
+          "id": 1,
+          "data": "User role"
+        },
+        {
+          "id": 2,
+          "data": "Terms & Conditions"
+        }
+      ]
     }
   ],
-  "countries": [
-    "Afghanistan",
-    "Albania",
-    "Algeria",
-    "Andorra",
-    "Angola",
-    "Antigua and Barbuda",
-    "Argentina",
-    "Armenia",
-    "Australia",
-    "Austria",
-    "Azerbaijan",
-    "Bahamas",
-    "Bahrain",
-    "Bangladesh",
-    "Barbados",
-    "Belarus",
-    "Belgium",
-    "Belize",
-    "Benin",
-    "Bhutan",
-    "Bolivia",
-    "Bosnia and Herzegovina",
-    "Botswana",
-    "Brazil",
-    "Brunei",
-    "Bulgaria",
-    "Burkina Faso",
-    "Burundi",
-    "Cabo Verde",
-    "Cambodia",
-    "Cameroon",
-    "Canada",
-    "Central African Republic",
-    "Chad",
-    "Chile",
-    "China",
-    "Colombia",
-    "Comoros",
-    "Congo (Congo-Brazzaville)",
-    "Costa Rica",
-    "Croatia",
-    "Cuba",
-    "Cyprus",
-    "Czechia (Czech Republic)",
-    "Denmark",
-    "Djibouti",
-    "Dominica",
-    "Dominican Republic",
-    "Ecuador",
-    "Egypt",
-    "El Salvador",
-    "Equatorial Guinea",
-    "Eritrea",
-    "Estonia",
-    "Eswatini (fmr. 'Swaziland')",
-    "Ethiopia",
-    "Fiji",
-    "Finland",
-    "France",
-    "Gabon",
-    "Gambia",
-    "Georgia",
-    "Germany",
-    "Ghana",
-    "Greece",
-    "Grenada",
-    "Guatemala",
-    "Guinea",
-    "Guinea-Bissau",
-    "Guyana",
-    "Haiti",
-    "Holy See",
-    "Honduras",
-    "Hungary",
-    "Iceland",
-    "India",
-    "Indonesia",
-    "Iran",
-    "Iraq",
-    "Ireland",
-    "Israel",
-    "Italy",
-    "Jamaica",
-    "Japan",
-    "Jordan",
-    "Kazakhstan",
-    "Kenya",
-    "Kiribati",
-    "Korea (North)",
-    "Korea (South)",
-    "Kosovo",
-    "Kuwait",
-    "Kyrgyzstan",
-    "Laos",
-    "Latvia",
-    "Lebanon",
-    "Lesotho",
-    "Liberia",
-    "Libya",
-    "Liechtenstein",
-    "Lithuania",
-    "Luxembourg",
-    "Madagascar",
-    "Malawi",
-    "Malaysia",
-    "Maldives",
-    "Mali",
-    "Malta",
-    "Marshall Islands",
-    "Mauritania",
-    "Mauritius",
-    "Mexico",
-    "Micronesia",
-    "Moldova",
-    "Monaco",
-    "Mongolia",
-    "Montenegro",
-    "Morocco",
-    "Mozambique",
-    "Myanmar (Burma)",
-    "Namibia",
-    "Nauru",
-    "Nepal",
-    "Netherlands",
-    "New Zealand",
-    "Nicaragua",
-    "Niger",
-    "Nigeria",
-    "North Macedonia",
-    "Norway",
-    "Oman",
-    "Pakistan",
-    "Palau",
-    "Palestine State",
-    "Panama",
-    "Papua New Guinea",
-    "Paraguay",
-    "Peru",
-    "Philippines",
-    "Poland",
-    "Portugal",
-    "Qatar",
-    "Romania",
-    "Russia",
-    "Rwanda",
-    "Saint Kitts and Nevis",
-    "Saint Lucia",
-    "Saint Vincent and the Grenadines",
-    "Samoa",
-    "San Marino",
-    "Sao Tome and Principe",
-    "Saudi Arabia",
-    "Senegal",
-    "Serbia",
-    "Seychelles",
-    "Sierra Leone",
-    "Singapore",
-    "Slovakia",
-    "Slovenia",
-    "Solomon Islands",
-    "Somalia",
-    "South Africa",
-    "South Sudan",
-    "Spain",
-    "Sri Lanka",
-    "Sudan",
-    "Suriname",
-    "Sweden",
-    "Switzerland",
-    "Syria",
-    "Tajikistan",
-    "Tanzania",
-    "Thailand",
-    "Timor-Leste",
-    "Togo",
-    "Tonga",
-    "Trinidad and Tobago",
-    "Tunisia",
-    "Turkey",
-    "Turkmenistan",
-    "Tuvalu",
-    "Uganda",
-    "Ukraine",
-    "United Arab Emirates",
-    "United Kingdom",
-    "United States of America",
-    "Uruguay",
-    "Uzbekistan",
-    "Vanuatu",
-    "Venezuela",
-    "Vietnam",
-    "Yemen",
-    "Zambia",
-    "Zimbabwe"
-  ],
-
+    "countries" :[
+       "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", 
+       "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", 
+       "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", 
+       "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", 
+       "Comoros", "Congo (Congo-Brazzaville)", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czechia (Czech Republic)", 
+       "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", 
+       "Eritrea", "Estonia", "Eswatini (fmr. 'Swaziland')", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", 
+       "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", 
+       "Holy See", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", 
+       "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea (North)", "Korea (South)", "Kosovo", 
+       "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", 
+       "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", 
+       "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar (Burma)", 
+       "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", 
+       "Norway", "Oman", "Pakistan", "Palau", "Palestine State", "Panama", "Papua New Guinea", "Paraguay", "Peru", 
+       "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", 
+       "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", 
+       "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", 
+       "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", 
+       "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", 
+       "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", 
+       "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+     ],
+     
 "cards": [
   {
     "id": "1",
@@ -346,5 +251,95 @@
     "title": "Serve U Well",
     "city": "amsterdam • eur"
   }
-]
+],
+"assetCards": [
+  {
+    "id": 1,
+    "image": "/assets/card-images/img-1.png",
+    "title": "Houthaven",
+    "city": "Amsterdam"
+  },
+  {
+    "id": 2,
+    "image": "/assets/card-images/img-2.png",
+    "title": "asdas",
+    "city": "Sadas"
+  },
+  {
+    "id": 3,
+    "image": "/assets/card-images/img-3.jpg",
+    "title": "asset 1",
+    "city": "fdgfd"
+  },
+  {
+    "id": 4,
+    "image": "/assets/card-images/img-4.jpg",
+    "title": "builder admin test 1 sbl",
+    "city": "leiden"
+  },
+  {
+    "id": 5,
+    "image": "/assets/card-images/img-5.jpeg",
+    "title": "Galaxy Apartments",
+    "city": "bangalore"
+  },
+  {
+    "id": 6,
+    "image": "/assets/card-images/img-6.jpg",
+    "title": "Hill View",
+    "city": "xyz"
+  },
+  {
+    "id": 7,
+    "image": "/assets/card-images/img-7.jpeg",
+    "title": "mars",
+    "city": "riccaton"
+  },
+  {
+    "id": 8,
+    "image": "/assets/card-images/img-8.jpg",
+    "title": "New asset",
+    "city": "test"
+  },
+  {
+    "id": 9,
+    "image": "/assets/card-images/img-9.jpeg",
+    "title": "Office Naarden",
+    "city": "test city"
+  }
+],
+
+  "assetview": [
+    {
+      "name": "Portfolio Assets",
+      "id": "list"
+    },
+    {
+      "name": "Portfolio Overview",
+      "id": "view"
+    },
+    {
+      "name": "Dashboard",
+      "id": "dashboard"
+    }
+  ],
+  "OverViewCardData": [
+    {
+      "id": 1,
+      "count": 254,
+      "data": "Total apartments",
+      "details": "26 assets"
+    },
+    {
+      "id": 2,
+      "count": 68,
+      "data": "Vacant"
+    },
+    {
+      "id": 3,
+      "count": 292,
+      "data": "Moved in",
+      "details": "270 waiting to move in"
+    }
+  ]
 }

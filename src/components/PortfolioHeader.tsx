@@ -1,26 +1,14 @@
-import { ButtonType, ButtonVariant, SortSelect } from "../types"
+import { ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
-import { SearchBar } from "./SearchBar"
 import { getTimePeriodOfDay } from "../utils"
 import { useNavigate } from "react-router-dom"
-import { SortSelector } from "./SortSelectbox"
 
-type HeaderProps = {
-    onSearchChange: (value: string) => void
-}
-
-export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
+export const PortfolioHeader: React.FC = () => {
     const nav=useNavigate()
     const handleClick = () => {
         nav('/addportfolio')
      }
-    const onSearch = (value: string) => {
-        onSearchChange(value)
-    }
     const greet = getTimePeriodOfDay();
-    const handleSort=()=>{
-        console.log()
-    }
 
     return (
         <div className="flex flex-col gap-3 mb-6">
@@ -37,11 +25,6 @@ export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
                     variant={ButtonVariant.DARK}
                 />
             </div>
-            <div className="flex justify-between items-center gap-2 flex-wrap">
-                <SearchBar onSearch={onSearch} />
-                <SortSelector handleSort={handleSort}/>
-            </div>
-            <div className="my-1 h-px bg-gray-200"></div>
         </div>
     )
-}
+}        

@@ -1,22 +1,47 @@
+import { useState } from "react";
 import { useJsonFetch } from "../hooks"
-import { OverviewCard } from "../types";
+import { OverviewCard, SortSelect } from "../types";
 import { OverViewCard } from "./OverViewCard";
+import { SearchBar } from "./SearchBar";
+import { SortSelector } from "./SortSelectbox";
 
-type PortfolioListProps = {
-    searchValue: string
-}
-
-export const PortfolioList: React.FC<PortfolioListProps> = ({ searchValue }) => {
+export const PortfolioList: React.FC= () => {
+  
+    const [searchValue, setSearchValue] = useState<string>("")
+    const [sortType, setSortType] = useState('')
     const { data } = useJsonFetch();
-    const portfoliolist = data?.cards?.filter((item: OverviewCard) => (
-        item.title.toLowerCase().includes(searchValue.toLowerCase())
-    ))
+    const onSearch = (value: string) => {
+        setSearchValue(value)
+    }
+    const handleSort = (value: SortSelect) => {
+        setSortType(value)
+    }
 
+    const portfoliolist = data?.cards
+        ?.filter((item: OverviewCard) => (
+            item.title.toLowerCase().includes(searchValue.toLowerCase())
+        ))
+        ?.sort((a: OverviewCard, b: OverviewCard) => {
+            if (sortType === SortSelect.DES) {
+                return b.title.localeCompare(a.title)
+            }
+            else if ((sortType === SortSelect.ASC))
+                return a.title.localeCompare(b.title)
+        })
+      
     return (
-        <div className="flex flex-wrap gap-5">
-            {portfoliolist?.map((item: OverviewCard ,index:number) => (
-                <OverViewCard item={item} index={index}  type={false} cardType ="portfolio" />
+       
+        <>
+        <div className="flex justify-between items-center gap-2 flex-wrap">
+            <SearchBar onSearch={onSearch} />
+            <SortSelector handleSort={handleSort} />
+        </div>
+        <div className="mt-4 mb-6 h-px bg-gray-200"></div>
+        <div className="flex flex-wrap gap-x-4 gap-y-5">
+            {portfoliolist?.map((item: OverviewCard) => (
+                <OverViewCard item={item} index={item.id}  cardType='portfolio' type={false}/>
             ))}
         </div>
+    </>
     )
 }
