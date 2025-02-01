@@ -36,4 +36,3 @@ export const AssetInnterButton: React.FC<ButtonIdProps> = ({ onSelect }) => {
         </div>
     );
 };
-

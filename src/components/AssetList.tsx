@@ -38,7 +38,7 @@ export const AssetList: React.FC = () => {
             <div className="mt-4 mb-6 h-px bg-gray-200"></div>
             <div className="flex flex-wrap gap-x-4 gap-y-5">
                 {assets?.map((item: OverviewCard) => (
-                    <OverViewCard item={item} key={item.id} />
+                    <OverViewCard item={item} index={item.id}  cardType='asset' type={false}/>
                 ))}
             </div>
         </>

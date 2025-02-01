@@ -1,7 +1,7 @@
 import { AssetList, ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
 import { getTimePeriodOfDay } from "../utils"
-import { AssetInnterButton } from "./AssetInnerButton"
+import { AssetInnterButton } from "./AssetInnerButton.tsx"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
