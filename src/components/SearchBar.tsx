@@ -13,7 +13,7 @@ export const SearchBar: React.FC<SearchProps> = ({ onSearch }) => (
             </div>
             <input
                 placeholder="Search"
-                className="block w-full text-sm p-2.5 pl-10 rounded-lg focus:ring focus:ring-black border"
+                className="block w-full text-sm p-2.5 pl-10 rounded-lg focus:ring focus:ring-black border border-slate-300"
                 onChange={(e) => onSearch(e.target.value)} />
         </div>
     </div>

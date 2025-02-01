@@ -17,4 +17,3 @@ export const SortSelector: React.FC<SelectProp> = ({ handleSort }) => {
         </div>
     )
 }
-
