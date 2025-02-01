@@ -4,6 +4,12 @@ export type OverviewCard = {
     title: string;
     city: string;
 }
+export type CardOverViewType = {
+    id: number,
+    count: number,
+    data: string,
+    details?: string
+}
 export type LeftSideBarType = {
     id: number;
     title: string;

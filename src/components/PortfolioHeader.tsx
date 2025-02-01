@@ -1,26 +1,13 @@
-import { ButtonType, ButtonVariant, SortSelect } from "../types"
+import { ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
-import { SearchBar } from "./SearchBar"
 import { getTimePeriodOfDay } from "../utils"
-import { SortSelector } from "./SortSelectbox"
 import { useNavigate } from "react-router-dom"
 
-type HeaderProps = {
-    onSearchChange: (value: string) => void
-    onSelectSortType: (value: SortSelect) => void
-}
-
-export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange, onSelectSortType }) => {
+export const PortfolioHeader: React.FC = () => {
     const nav=useNavigate()
     const handleClick = () => {
-        nav('/addPortfolio')
-    }
-    const onSearch = (value: string) => {
-        onSearchChange(value)
-    }
-    const getSortType = (value: SortSelect) => {
-        onSelectSortType(value)
-    }
+        nav('/addportfolio')
+     }
     const greet = getTimePeriodOfDay();
 
     return (
@@ -38,11 +25,6 @@ export const PortfolioHeader: React.FC<HeaderProps> = ({ onSearchChange, onSelec
                     variant={ButtonVariant.DARK}
                 />
             </div>
-            <div className="flex justify-between items-center gap-2 flex-wrap">
-                <SearchBar onSearch={onSearch} />
-                <SortSelector handleSort={getSortType} />
-            </div>
-            <div className="my-1 h-px bg-gray-200"></div>
         </div>
     )
-}
+}        

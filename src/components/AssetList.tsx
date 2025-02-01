@@ -5,11 +5,11 @@ import { OverViewCard } from "./OverViewCard";
 import { SearchBar } from "./SearchBar";
 import { SortSelector } from "./SortSelectbox";
 
-export const PortfolioList: React.FC= () => {
-  
+export const AssetList: React.FC = () => {
     const [searchValue, setSearchValue] = useState<string>("")
     const [sortType, setSortType] = useState('')
     const { data } = useJsonFetch();
+
     const onSearch = (value: string) => {
         setSearchValue(value)
     }
@@ -17,7 +17,7 @@ export const PortfolioList: React.FC= () => {
         setSortType(value)
     }
 
-    const portfoliolist = data?.cards
+    const assets = data?.assetCards
         ?.filter((item: OverviewCard) => (
             item.title.toLowerCase().includes(searchValue.toLowerCase())
         ))
@@ -30,18 +30,19 @@ export const PortfolioList: React.FC= () => {
         })
       
     return (
-       
         <>
-        <div className="flex justify-between items-center gap-2 flex-wrap">
-            <SearchBar onSearch={onSearch} />
-            <SortSelector handleSort={handleSort} />
-        </div>
-        <div className="mt-4 mb-6 h-px bg-gray-200"></div>
-        <div className="flex flex-wrap gap-x-4 gap-y-5">
-            {portfoliolist?.map((item: OverviewCard) => (
-                <OverViewCard item={item} index={item.id}  cardType='portfolio' type={false}/>
-            ))}
-        </div>
-    </>
+            <div className="flex justify-between items-center gap-2 flex-wrap">
+                <SearchBar onSearch={onSearch} />
+                <SortSelector handleSort={handleSort} />
+            </div>
+            <div className="mt-4 mb-6 h-px bg-gray-200"></div>
+            <div className="flex flex-wrap gap-x-4 gap-y-5">
+                {assets?.map((item: OverviewCard) => (
+                    <OverViewCard item={item} index={item.id}  cardType='asset' type={false}/>
+                ))}
+            </div>
+        </>
     )
 }
+
+

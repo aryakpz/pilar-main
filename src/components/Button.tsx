@@ -17,12 +17,12 @@ export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, var
     const buttonClass = clsx("flex items-center rounded-md text-sm p-0.5 border border-transparent ",
         {
             "bg-btn-black text-white font-medium": variant === ButtonVariant.DARK,
-            "bg-btn-white font-medium": variant === ButtonVariant.LIGHT,
+            " font-medium": variant === ButtonVariant.LIGHT,
         }, style
     )
     const labelClass = clsx("flex items-center rounded-md text-sm",
         {
-            "px-4 py-2": variant === ButtonVariant.DARK,
+            "px-4 py-2 text-white": variant === ButtonVariant.DARK,
             "px-3 py-1.5": variant === ButtonVariant.LIGHT
         }, style)
 
@@ -39,7 +39,7 @@ export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, var
                         <img src={supportImg} alt={supportImg} className="ml-2 h-5 w-5 " />
                     </span>
                     : <>
-                        {showAddIcon && <img src={image} alt={image} className="pl-3" />}
+                        {showAddIcon && <img src={image} alt={image} className="pr-3" />}
                         <span className="text-xs sm:text-sm">{label}</span>
                     </>
                 }
