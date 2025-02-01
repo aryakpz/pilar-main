@@ -1,14 +1,20 @@
+import { useNavigate } from "react-router-dom"
 import { OverviewCard } from "../types"
 
 type ItemProps = {
     item: OverviewCard
     index: number
     type?: boolean
+    cardType:'portfolio' | 'asset'
 }
 
-export const OverViewCard: React.FC<ItemProps> = ({ item, index, type }) => {
+export const OverViewCard: React.FC<ItemProps> = ({ item, index, type, cardType }) => {
+    const nav =useNavigate()
+    const handleCardClick=()=>{
+     { cardType === 'portfolio' ? nav('/assets') : nav('/viewdetails')}
+    }
     return (
-        <div key={index} className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 ">
+        <div key={index} className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 " onClick={handleCardClick}>
             <img alt={item.image} className="p-4 h-44 w-full object-contain rounded-lg" src={item.image} />
             <div className="flex flex-col p-4 pt-0">
                 <div className="flex items-center">
@@ -30,3 +36,5 @@ export const OverViewCard: React.FC<ItemProps> = ({ item, index, type }) => {
         </div>
     )
 }
+
+
