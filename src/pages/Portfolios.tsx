@@ -1,54 +1,20 @@
-import React, { useState } from "react";
-import { Button, SearchBar } from "../components";
-import { useNavigate } from "react-router-dom";
-import { ButtonType, ButtonVariant, Language, SortSelect } from "../types";
+import { useState } from "react";
 import { Header } from "../components";
-import { SelectBox } from "../components";
-import { LanguageSelector } from "../components";
-import { SortSelector } from "../components";
-
 
 export const Portfolio: React.FC = () => {
-    const nav = useNavigate()
-    const [country, setCountry] = useState("")
-    const [search, setSearch] = useState("")
-    const [language, setLanguage] = useState("en")
-    const [sortPortfolios, setsortPortfolios] = useState<SortSelect>(SortSelect.ASC)
-    const handleClick = () => {
-        nav('')
+    const [searchValue, setSearchValue] = useState<string>("")
+    const handleSearch = (value: string) => {
+        setSearchValue(value)
     }
-
-    const onLanguageChange = (value: Language) => {
-        setLanguage(value)
-    }
-
-    const onSelectChange = (value: string) => {
-        setCountry(value)
-    }
-
-    const onSearch = (value: string) => {
-        setSearch(value)
-    }
-
-    const getSortedPortfolios = (value: SortSelect) => {
-        setsortPortfolios(value)
-    }
-
+    console.log(234)
+    
     return (
         <div>
             <Header />
-            <div className="p-10">
-            </div>
-            <div className="p-10">
-                <SearchBar onSearch={onSearch} />
-            </div>
-            <SelectBox onSelectChange={onSelectChange} />
-            <div className="p-5">
-                <LanguageSelector onSelectChange={onLanguageChange} />
-            </div>
-            <div className="p-5">
-                <SortSelector handleSort={getSortedPortfolios} />
-            </div>
-        </div>
+            <main className="w-full h-screen overflow-y-auto pt-10 bg-gray-100">
+                <div className="px-12 pb-5 sm:px-24 md:px-28 lg:px-36">
+                </div>
+            </main>
+        </div>        
     )
-}
+}   
