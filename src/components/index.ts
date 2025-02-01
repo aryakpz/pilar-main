@@ -28,4 +28,5 @@ export * from './PortfolioHeader';
 export * from './PortfolioList';
 export * from './AssetInnerButton';
 export * from './AssetHeader';
-export * from './AssetList'
+export * from './StepNavBar'
+export * from './AssetList';

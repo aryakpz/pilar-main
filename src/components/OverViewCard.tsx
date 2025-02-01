@@ -10,11 +10,11 @@ type ItemProps = {
 
 export const OverViewCard: React.FC<ItemProps> = ({ item, index, type, cardType }) => {
     const nav =useNavigate()
-    const handleCardClick=()=>{
-     { cardType === 'portfolio' ? nav('/assets') : nav('/viewdetails')}
+    const handleCardClick=(id:number)=>{
+     { cardType === 'portfolio' ? nav('/assets') : nav('/overview',{state:id})}
     }
     return (
-        <div key={index} className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 " onClick={handleCardClick}>
+        <div key={index} className="flex rounded-lg border border-grey-200 bg-white shadow-md flex-col w-60 " onClick={()=>handleCardClick(item.id)}>
             <img alt={item.image} className="p-4 h-44 w-full object-contain rounded-lg" src={item.image} />
             <div className="flex flex-col p-4 pt-0">
                 <div className="flex items-center">

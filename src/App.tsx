@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { Portfolio ,AddPortfolios, Assets, AddAsset} from "./pages"
+import { Portfolio ,AddPortfolios, Assets, AddAsset, AssetDetails} from "./pages"
 import { AssetDashboard, AssetList, AssetOverview } from "./components"
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Route path="dashboard" element={<AssetDashboard />} />
       </Route>
       <Route path="/addAsset" element={<AddAsset/>} />
+      <Route path='/overview' element={<AssetDetails/>}/>
     </Routes>
   )
 }
