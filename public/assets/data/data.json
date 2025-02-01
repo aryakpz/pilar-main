@@ -13,6 +13,53 @@
       "id": "dashboard"
     }
   ],
+  "assetCards": [
+    {
+      "image": "/assets/card-images/img-1.png",
+      "title": "Houthaven",
+      "city": "Amsterdam"
+    },
+    {
+      "image": "/assets/card-images/img-2.png",
+      "title": "asdas",
+      "city": "Sadas"
+    },
+    {
+      "image": "/assets/card-images/img-3.jpg",
+      "title": "asset 1",
+      "city": "fdgfd"
+    },
+    {
+      "image": "/assets/card-images/img-4.jpg",
+      "title": "builder admin test 1 sbl",
+      "city": "leiden"
+    },
+    {
+      "image": "/assets/card-images/img-5.jpeg",
+      "title": "Galaxy Apartments",
+      "city": "bangalore"
+    },
+    {
+      "image": "/assets/card-images/img-6.jpg",
+      "title": "Hill View",
+      "city": "xyz"
+    },
+    {
+      "image": "/assets/card-images/img-7.jpeg",
+      "title": "mars",
+      "city": "riccaton"
+    },
+    {
+      "image": "/assets/card-images/img-8.jpg",
+      "title": "New asset",
+      "city": "test"
+    },
+    {
+      "image": "/assets/card-images/img-9.jpeg",
+      "title": "Office Naarden",
+      "city": "test city"
+    }
+  ],
   "countries": [
     "Afghanistan",
     "Albania",

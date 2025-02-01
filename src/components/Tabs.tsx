@@ -9,7 +9,6 @@ export const Tabs = () => {
 
     const handleClick = (id: string) => {
         setActiveButton(id);
-        console.log(`Button ${id} clicked`);
     };
 
     return (

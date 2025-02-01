@@ -14,8 +14,8 @@ export const PortfolioList: React.FC<PortfolioListProps> = ({ searchValue }) => 
 
     return (
         <div className="flex flex-wrap gap-5">
-            {portfoliolist?.map((item: OverviewCard) => (
-                <OverViewCard item={item} />
+            {portfoliolist?.map((item: OverviewCard ,index:number) => (
+                <OverViewCard item={item} index={index}  type={false} cardType ="portfolio" />
             ))}
         </div>
     )

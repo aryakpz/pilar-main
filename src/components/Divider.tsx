@@ -1,6 +1,3 @@
-type DividerProps = {
-    style?: string
-}
-export const Divider: React.FC<DividerProps> = ({ style }) => (
-    <div className={`h-px bg-gray-200 ${style}`}></div>
+export const Divider = () => (
+    <div className="mt-4 mb-6 h-px bg-gray-200"></div>
 )

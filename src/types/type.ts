@@ -13,4 +13,5 @@ export type OverviewCard = {
     image: string;
     title: string;
     city: string;
+    
 }
