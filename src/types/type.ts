@@ -9,9 +9,15 @@ export type ButtonProps = {
 }
 
 export type OverviewCard = {
-    id:number;
+    id: number;
     image: string;
     title: string;
     city: string;
-    
+}
+
+export type CardOverViewType = {
+    id: number,
+    count: number,
+    data: string,
+    details?: string
 }

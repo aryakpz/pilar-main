@@ -15,49 +15,77 @@
   ],
   "assetCards": [
     {
+      "id": 1,
       "image": "/assets/card-images/img-1.png",
       "title": "Houthaven",
       "city": "Amsterdam"
     },
     {
+      "id": 2,
       "image": "/assets/card-images/img-2.png",
       "title": "asdas",
       "city": "Sadas"
     },
     {
+      "id": 3,
       "image": "/assets/card-images/img-3.jpg",
       "title": "asset 1",
       "city": "fdgfd"
     },
     {
+      "id": 4,
       "image": "/assets/card-images/img-4.jpg",
       "title": "builder admin test 1 sbl",
       "city": "leiden"
     },
     {
+      "id": 5,
       "image": "/assets/card-images/img-5.jpeg",
       "title": "Galaxy Apartments",
       "city": "bangalore"
     },
     {
+      "id": 6,
       "image": "/assets/card-images/img-6.jpg",
       "title": "Hill View",
       "city": "xyz"
     },
     {
+      "id": 7,
       "image": "/assets/card-images/img-7.jpeg",
       "title": "mars",
       "city": "riccaton"
     },
     {
+      "id": 8,
       "image": "/assets/card-images/img-8.jpg",
       "title": "New asset",
       "city": "test"
     },
     {
+      "id": 9,
       "image": "/assets/card-images/img-9.jpeg",
       "title": "Office Naarden",
       "city": "test city"
+    }
+  ],
+  "OverViewCardData": [
+    {
+      "id": 1,
+      "count": 254,
+      "data": "Total apartments",
+      "details": "26 assets"
+    },
+    {
+      "id": 2,
+      "count": 68,
+      "data": "Vacant"
+    },
+    {
+      "id": 3,
+      "count": 292,
+      "data": "Moved in",
+      "details": "270 waiting to move in"
     }
   ],
   "countries": [

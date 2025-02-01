@@ -1,23 +1,21 @@
-import { ButtonType, ButtonVariant } from "../types"
+import { AssetList, ButtonType, ButtonVariant } from "../types"
 import { Button } from "./Button"
-import { SearchBar } from "./SearchBar"
 import { getTimePeriodOfDay } from "../utils"
-import { Tabs } from "./Tabs"
-import { Divider } from "./Divider"
+import { AssetInnterButton } from "./AssetInnerButton.tsx"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
-type HeaderProps = {
-    onSearchChange: (value: string) => void
-}
-
-export const AssetHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
-
+export const AssetHeader: React.FC = () => {
+    const nav = useNavigate()
+    const [activeBtn, setActiveBtn] = useState<AssetList>(AssetList.LIST)
     const handleClick = () => {
-        console.log(`Button clicked`);
-    };
-    const onSearch = (value: string) => {
-        onSearchChange(value)
+        nav('/addAsset')
     }
     const greet = getTimePeriodOfDay();
+    const handleSelect = (id: AssetList) => {
+        setActiveBtn(id)
+        nav(`/assets/${id.toLowerCase()}`);
+    }
 
     return (
         <>
@@ -26,20 +24,17 @@ export const AssetHeader: React.FC<HeaderProps> = ({ onSearchChange }) => {
                     Good {greet}, Admin!
                 </h4>
                 <div className="flex justify-between items-center flex-wrap gap-2">
-                    <Tabs />
-                    <Button
-                        label="New Asset"
-                        type={ButtonType.BUTTON}
-                        onClick={handleClick}
-                        showAddIcon={true}
-                        variant={ButtonVariant.DARK}
-                    />
+                    <AssetInnterButton onSelect={handleSelect} />
+                    {activeBtn === AssetList.LIST &&
+                        <Button
+                            label="New Asset"
+                            type={ButtonType.BUTTON}
+                            onClick={handleClick}
+                            showAddIcon={true}
+                            variant={ButtonVariant.DARK}
+                        />}
                 </div>
             </div>
-            <div className="flex justify-between items-center gap-2 flex-wrap">
-                <SearchBar onSearch={onSearch} />
-            </div>
-            <Divider />
         </>
     )
 }

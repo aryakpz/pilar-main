@@ -38,6 +38,12 @@ export enum DateFormatType {
 }
 
 export enum SortSelect {
-    "ASC" = "A-Z",
-    "DES" = "Z-A"
+    ASC = "A-Z",
+    DES = "Z-A"
+}
+
+export enum AssetList {
+    LIST = "list",
+    VIEW = 'view',
+    DASH = 'dashboard'
 }

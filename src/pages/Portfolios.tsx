@@ -6,8 +6,7 @@ export const Portfolio: React.FC = () => {
     const handleSearch = (value: string) => {
         setSearchValue(value)
     }
-    console.log(234)
-    
+        
     return (
         <div>
             <Header />

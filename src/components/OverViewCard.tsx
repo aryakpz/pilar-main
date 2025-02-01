@@ -36,5 +36,3 @@ export const OverViewCard: React.FC<ItemProps> = ({ item, index, type, cardType 
         </div>
     )
 }
-
-
