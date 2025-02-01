@@ -16,7 +16,7 @@ export const Button: React.FC<ButtonProps> = ({ label, style, type, onClick, var
     const buttonClass = clsx(style, "flex items-center rounded-md text-sm p-0.5 border border-transparent ",
         {
             "bg-btn-black text-white font-medium": variant === ButtonVariant.DARK,
-            "bg-btn-white font-medium": variant === ButtonVariant.LIGHT,
+            "font-medium": variant === ButtonVariant.LIGHT,
         }
     )
 

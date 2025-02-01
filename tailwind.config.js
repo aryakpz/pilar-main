@@ -19,7 +19,6 @@ export default {
       backgroundSize: {
         "size": '1.3rem 1.3rem',
       }
-
     },
   },
   plugins: [],

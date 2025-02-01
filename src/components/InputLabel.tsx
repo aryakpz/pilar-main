@@ -2,7 +2,7 @@ import React from "react"
 
 type InputType = {
     text?: string;
-    value:string;
+    value?:string;
     restProps?: (value: string) => void;
     onChange: (value: string) => void;
 }
