@@ -1,5 +1,6 @@
 import { ButtonVariant } from "../../types";
 import { Button } from "../Button";
+import { Divider } from "../Divider";
 import { DateSelectbox } from "./DateSelectbox";
 import { TowerSelector } from "./TowerSelector";
 
@@ -27,6 +28,7 @@ export const NewsHeader = () => {
           onClick={handleAddNews}
           />
       </div>
+      <Divider style="mt-4 mb-1"/>
     </div>
   );
 };

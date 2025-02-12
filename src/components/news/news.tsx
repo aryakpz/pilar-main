@@ -1,3 +1,4 @@
+import { NewsCards } from "./NewsCards";
 import { NewsHeader } from "./NewsHeader";
 
 export const NewsUpdates = () => {
@@ -5,6 +6,7 @@ export const NewsUpdates = () => {
     <main className="w-full overflow-y-auto p-4 bg-white">
       <div className="relative">
        <NewsHeader/>
+       <NewsCards/>
       </div>
     </main>
   );

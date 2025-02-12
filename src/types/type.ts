@@ -22,3 +22,13 @@ export type MenuType = {
     id: number;
     data: string
 }[]
+
+export type NewsCard ={
+    id:number
+    title:string;
+    sub_title:string;
+    date:string;
+    time:string;
+    image?:string;
+    attachments:string;
+}
