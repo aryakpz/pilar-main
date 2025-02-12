@@ -515,47 +515,49 @@
     }
   ],
   "newscards": [
-    {
+    { "id":1,
       "title": "NOTICE",
-      "sub_title": "test",
+      "sub_title": "Test news",
       "date": "15-01-2025",
       "time": "09:04 AM"
     },
-    {
+    { "id":2,
       "title": "NOTICE",
       "sub_title": "test",
       "date": "14-01-2025",
       "time": "10:03 PM"
     },
-    {
+    { "id":3,
       "title": "ANNOUNCEMENT",
-      "sub_title": "Test News",
+      "sub_title": "Test news",
       "date": "14-01-2025",
       "time": "05:57 PM"
     },
-    {
+    { "id":4,
       "title": "ANNOUNCEMENT",
       "sub_title": "test",
       "date": "14-01-2025",
       "time": "05:12 PM"
     },
-    {
+    { "id":5,
       "title": "ANNOUNCEMENT",
       "sub_title": "Test",
       "date": "14-01-2025",
       "time": "05:09 PM"
     },
-    {
+    { "id":6,
       "title": "ANNOUNCEMENT",
-      "sub_title": "Exiting update: streamlined Repair Requests with Ziezodan Integration",
+      "sub_title": "Exciting Update: Streamlined Repair Requests with Ziezodan Integration",
       "date": "14-02-2025",
-      "time": "05:07 PM"
+      "time": "05:07 PM",
+      "image":"/assets/card-images/img-7.jpeg"
     },
-    {
+    { "id":7,
       "title": "ANNOUNCEMENT",
-      "sub_title": "Test",
-      "date": "14-01-2025",
-      "time": "05:09 PM"
+      "sub_title": "Test news email",
+      "date": "14-02-2025",
+      "time": "05:09 PM",
+      "attachments":"1 attachments included"
     }
   ],
   "NewsTowers": [
