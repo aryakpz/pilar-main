@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { LeftSideBarType } from "../types";
 import { DropdownMenu } from "./DropdownMenu";
+import { useNavigate } from "react-router-dom";
 
 type SideBarItemType = {
     item: LeftSideBarType;
 };
 
 export const SideBarItem: React.FC<SideBarItemType> = ({ item }) => {
+    const nav=useNavigate()
     const [activeBtn, setActiveBtn] = useState<string | null>(null);
 
     const handleDropdownClick = (title: string) => {
@@ -15,12 +17,14 @@ export const SideBarItem: React.FC<SideBarItemType> = ({ item }) => {
 
     const handleTitleClick = (title: string) => { 
         console.log(title)
+        nav(title)
+    
     }
     return (
         <a>
             <button
                 className={`w-full hover:bg-gray-100 rounded-lg flex items-center false ${item.dropDown ? "group p-2" : "my-2  px-2 pb-1.5 pt-1.5  "}`}
-                onClick={() => { item.dropDown ? handleDropdownClick(item.title) : handleTitleClick(item.title) }}>
+                onClick={() => item.dropDown ? handleDropdownClick(item.title) : handleTitleClick(item.title) }>
                 <span className="w-7">
                     <img src={item.image} alt={`${item.title} icon`} />
                 </span>

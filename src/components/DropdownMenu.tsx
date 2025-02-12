@@ -16,7 +16,7 @@ export const DropdownMenu: React.FC<DropdownProps> = ({ menu, onItemClick }) => 
                     >
                         {item.data}
                     </button>
-                </li>
+                </li>  
             ))}
         </ul>
     )
