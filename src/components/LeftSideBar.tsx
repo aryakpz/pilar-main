@@ -9,7 +9,7 @@ export const LeftSideBar = () => {
 
     }
     return (
-        <div className="w-fit flex border-r bg-white">
+        
             <aside className="h-full w-64">
                 <div className="h-full overflow-y-auto overflow-x-hidden rounded bg-white py-4 px-3 ">
                     <div className="h-full flex flex-col">
@@ -38,7 +38,7 @@ export const LeftSideBar = () => {
                     </div>
                 </div>
             </aside>
-        </div>
+        
     )
 }
 
