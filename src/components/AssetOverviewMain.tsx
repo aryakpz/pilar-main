@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import { LeftSideBar } from "./LeftSideBar";
+import { SideBar } from "./LeftSideBar";
 
 export const AssetOverviewMain = () => {
   return (
     <div className="flex flex-1 overflow-hidden">
       <div className="w-fit flex border-r bg-white">
-        <LeftSideBar />
+        <SideBar />
       </div>
         <Outlet />
     </div>
