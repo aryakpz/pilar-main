@@ -4,19 +4,20 @@ import attachment from "/assets/images/attachment.svg";
 
 type NewsCardProps = {
   news: NewsCard;
+  onClick:(value:NewsCard)=>void
 };
 
-export const NewsCardOverview: React.FC<NewsCardProps> = ({ news }) => {
+export const NewsCardOverview: React.FC<NewsCardProps> = ({ news,onClick }) => {
   const [showArchive, setShowArchive] = useState<boolean>(false);
 
   return (
-    <div className="flex rounded-lg border-gray-200 bg-white shadow-md border relative">
+    <div className="flex rounded-lg border-gray-200 bg-white shadow-md border relative" onClick={()=>onClick(news)}>
       <div className="flex h-full flex-col justify-center gap-4 p-6 w-full">
         <div className="flex flex-row justify-between p-2">
           <div className="flex flex-col align-top">
             <div className="flex">
               <span className="flex-1 font-semibold text-lg leading-7">
-                {news?.title}
+               {news?.title.toUpperCase()}
               </span>
             </div>
             <div className="text-sm leading-5 w-96 text-gray-500 mb-3">

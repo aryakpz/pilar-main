@@ -22,7 +22,9 @@ export * from './CardOverView';
 export * from './AssetList'
 export * from './PortfolioHeader';
 export * from './PortfolioList';
-export * from './AssetInnerButton';
+export * from './AssetInnerButton';   
 export * from './AssetHeader';
 export * from './StepNavBar'
 export * from './AssetList';
+export * from './news';
+export * from './NotFound';

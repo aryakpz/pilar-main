@@ -22,29 +22,29 @@ export const SideBarItem: React.FC<SideBarItemType> = ({ item }) => {
   return (
     <a>
       <button
-        className={`w-full hover:bg-gray-100 rounded-lg flex items-center false ${item.dropDown ? "group p-2" : "my-2  px-2 pb-1.5 pt-1.5  "}`}
+        className={`w-full hover:bg-gray-100 rounded-lg flex items-center false ${item?.dropDown ? "group p-2" : "my-2  px-2 pb-1.5 pt-1.5  "}`}
         onClick={() =>
-          item.dropDown
-            ? handleDropdownClick(item.title)
-            : handleTitleClick(item.title)
+          item?.dropDown
+            ? handleDropdownClick(item?.title)
+            : handleTitleClick(item?.title)
         }
       >
         <span className="w-7">
-          <img src={item.image} alt={`${item.title} icon`} />
+          <img src={item?.image} alt={item?.title} />
         </span>
         <span
-          className={`flex-1 whitespace-nowrap text-left ${item.dropDown ? "pl-2" : "pl-1"}`}
+          className={`flex-1 whitespace-nowrap text-left ${item?.dropDown ? "pl-2" : "pl-1"}`}
         >
-          {item.title}
+          {item?.title}
         </span>
-        {item.dropDown && (
+        {item?.dropDown && (
           <span>
-            <img src={item.dropDown} alt="Dropdown arrow" className="w-6 h-6" />
+            <img src={item?.dropDown} alt="Dropdown arrow" className="w-6 h-6" />
           </span>
         )}
       </button>
       {activeBtn === item.title && (
-        <DropdownMenu menu={item.menu} onItemClick={handleTitleClick} />
+        <DropdownMenu menu={item?.menu} onItemClick={handleTitleClick} />
       )}
     </a>
   );
