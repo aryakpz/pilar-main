@@ -10,4 +10,4 @@ export const AssetDetails=()=>{
             <AssetOverviewMain/>
         </div>
     )
-}
+} 
