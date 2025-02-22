@@ -515,49 +515,70 @@
     }
   ],
   "newscards": [
-    { "id":1,
-      "title": "NOTICE",
+    {
+      "id": 1,
+      "title": "Notice",
+      "sub_asset": "Nenya",
       "sub_title": "Test news",
       "date": "15-01-2025",
+      "text":"testing news and announcements will show here.....",
       "time": "09:04 AM"
     },
-    { "id":2,
-      "title": "NOTICE",
+    {
+      "id": 2,
+      "title": "Notice",
+      "sub_asset": "ABC",
       "sub_title": "test",
       "date": "14-01-2025",
+      "text":"testing news and announcements will show here.....",
       "time": "10:03 PM"
     },
-    { "id":3,
-      "title": "ANNOUNCEMENT",
+    {
+      "id": 3,
+      "title": "Announcement",
+      "sub_asset": "Change=NW",
       "sub_title": "Test news",
       "date": "14-01-2025",
+      "text":"testing news and announcements will show here.....",
       "time": "05:57 PM"
     },
-    { "id":4,
-      "title": "ANNOUNCEMENT",
+    {
+      "id": 4,
+      "title": "Announcement",
+      "sub_asset": "Sub-asset-1",
       "sub_title": "test",
       "date": "14-01-2025",
+      "text":"testing news and announcements will show here.....",
       "time": "05:12 PM"
     },
-    { "id":5,
-      "title": "ANNOUNCEMENT",
+    {
+      "id": 5,
+      "title": "Announcement",
+      "sub_asset": "Sub-asset-2",
       "sub_title": "Test",
       "date": "14-01-2025",
+      "text":"testing news and announcements will show here.....",
       "time": "05:09 PM"
     },
-    { "id":6,
-      "title": "ANNOUNCEMENT",
+    {
+      "id": 6,
+      "title": "Announcement",
+      "sub_asset": "SBL littlelake",
       "sub_title": "Exciting Update: Streamlined Repair Requests with Ziezodan Integration",
       "date": "14-02-2025",
+      "text":"testing news and announcements will show here.....",
       "time": "05:07 PM",
-      "image":"/assets/card-images/img-7.jpeg"
+      "image": "/assets/card-images/img-7.jpeg"
     },
-    { "id":7,
-      "title": "ANNOUNCEMENT",
+    {
+      "id": 7,
+      "title": "Announcement",
+      "sub_asset": "dasd",
       "sub_title": "Test news email",
       "date": "14-02-2025",
+      "text":"testing news and announcements will show here.....",
       "time": "05:09 PM",
-      "attachments":"1 attachments included"
+      "attachments": "1 attachments included"
     }
   ],
   "NewsTowers": [

@@ -6,9 +6,14 @@ import {
   AddAsset,
   AssetDetails,
 } from "./pages";
-import { AssetDashboard, AssetList, AssetOverview } from "./components";
-import { NotFound } from "./components/NotFound";
-import { NewsUpdates } from "./components/news";
+import {
+  AssetDashboard,
+  AssetList,
+  AssetOverview,
+  NewsDetails,
+  NewsUpdates,
+  NotFound,
+} from "./components";
 
 function App() {
   return (
@@ -23,7 +28,8 @@ function App() {
       </Route>
       <Route path="/addAsset" element={<AddAsset />} />
       <Route path="/overview" element={<AssetDetails />}>
-        <Route path ='News' element={<NewsUpdates/>}/>
+        <Route path="News" element={<NewsUpdates />} />
+        <Route path="newscardoverview" element={<NewsDetails />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
